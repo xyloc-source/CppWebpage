@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- 設定支援RWD-->
+    <title>聯絡我們</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="contact-page">
+  <header>
+      <h1>Cppcheck Premium</h1>
+      <nav>
+          <ul>
+              <li><a href="index.html#overview">概述</a></li>
+              <li><a href="index.html#features-title">產品特點</a></li>
+              <li><a href="index.html#industry">產業應用</a></li>
+              <li><a href="index.html#standards">資安與標準支援</a></li>
+              <li><a href="index.html#info">聯絡我們</a></li>
+          </ul>
+      </nav>
+  </header>
+
+  <main>
+    <h2>Cppcheck Premium 服務支援</h2>
+
+    <p class="description">
+        如果您對 Cppcheck Premium 有任何問題，請透過以下表格與我們聯絡，我們會盡快回覆您！
+    </p>
+
+    <form action="javascript: GoogleForm()" id="contactForm">
+            <div class="form-row">
+                <label for="name">姓名<span class="required">*</span></label>
+                <input type="text" id="name" name="Name" required>
+            </div>
+
+            <div class="form-row">
+                <label for="email">電子郵件<span class="required">*</span></label>
+                <input type="email" id="email" name="Email" required>
+            </div>
+
+            <div class="form-row">
+                <label for="company">公司名稱<span class="required">*</span></label>
+                <input type="text" id="company" name="Company" required>
+            </div>
+
+            <div class="form-row">
+                <label for="phone">聯絡電話</label>
+                <input type="text" id="phone" name="Phone">
+            </div>
+
+            <div class="form-row">
+                <label for="subject">詢問主題<span class="required">*</span></label>
+                <select id="subject" name="Subject" required>
+                    <option value="" disabled selected>請選擇</option>
+
+                    <optgroup label="客服相關">
+                        <option>與銷售人員交談</option>
+                        <option>產品介紹文件</option>
+                        <option>免費試用Cppcheck</option>
+                        <option>價格與授權詢問</option>
+                        <option>帳單和付款資訊</option>
+                    </optgroup>
+            
+                    <optgroup label="技術支援">
+                        <option>軟體安裝與設定</option>
+                        <option>技術支援要求</option>
+                        <option>分析結果與誤報問題</option>
+                    </optgroup>
+            
+                    <optgroup label="其它">
+                        <option>其它問題</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <div class="form-row full-width">
+                <label for="question">我們能幫您什麼？<span class="required">*</span></label>
+                <textarea id="question" name="Question" rows="5" required></textarea>
+            </div>
+
+            <p class="disclaimer">
+                您提供給我們的聯絡資訊，將作為我們提供產品與服務資訊之聯繫用途。當您提交訊息時，即表示您同意上述使用範圍。
+            </p>
+
+            <div class="submit-row">
+                <button type="submit" class="submit-button">提交</button>
+            </div>
+    </form>
+
+  </main>
+
+  <!-- JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+      function GoogleForm() {
+          // 宣告欄位
+          var field1 = $("[name='Name']").val();
+          var field2 = $("[name='Email']").val();
+          var field3 = $("[name='Company']").val();
+          var field4 = $("[name='Phone']").val();
+          var field5 = $("[name='Subject']").val();
+          var field6 = $("[name='Question']").val();
+          $.ajax({
+              url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLScrQDtYCxtWJhlYHlxHBySZrZPuhKm4eDYYGeMYHRR8rG5s0Q/formResponse",   // Google Form「原始碼」標籤裡面的form action網址
+              data: {
+                  // Google Form「元件」標籤裡面搜尋"entry"
+                  "entry.41073338": field1,
+                  "entry.1138436996": field2,
+                  "entry.395248319": field3,
+                  "entry.2054497579": field4,
+                  "entry.531304670": field5,
+                  "entry.1582170040": field6
+              },
+              type: "Post",
+              dataType: "xml",
+              statusCode: {
+                  0: function() {
+                      alert("您的訊息已成功送出！");
+                      document.getElementById('contactForm').reset();   // 清除表格內容
+                  },
+                  200: function() {
+                      alert("您的訊息已成功送出！");
+                      document.getElementById('contactForm').reset();   // 清除表格內容
+                  },
+                  400: function () {
+                      alert("錯誤 400：請求格式有誤，請檢查您填寫的內容。");
+                  },
+                  401: function () {
+                      alert("錯誤 401：您沒有權限送出，請確認登入狀態。");
+                  },
+                  403: function () {
+                      alert("錯誤 403：禁止存取，您的請求被拒絕。");
+                  },
+                  404: function () {
+                      alert("錯誤 404：伺服器找不到資源，請稍後再試。");
+                  },
+                  500: function () {
+                      alert("錯誤 500：伺服器發生錯誤，請稍後再試。");
+                  },
+                  503: function () {
+                      alert("錯誤 503：伺服器暫時無法使用，請稍後再試。");
+                  },
+                  default: function() {
+                      alert("發生未知錯誤，請稍後再試。");
+                  }
+              }
+          })
+      }
+  </script>
+
+</body>
+
+</html>

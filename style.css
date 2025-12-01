@@ -1,0 +1,574 @@
+/* 移除瀏覽器預設的邊距 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 這一行可以讓所有頁內錨點連結的跳轉效果變得平滑 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 共用樣式：所有頁面都繼承 */
+body {
+    font-family: "Microsoft YaHei", "微软雅黑", sans-serif;
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* 「Header」Section                                                          */
+/* ------------------------------------------------------------------------- */
+
+header {
+    background-color: white;
+    height: 80px;
+    width: 100%;       /* 寬度與視窗同寬 */
+    position: fixed;   /* 固定在頁面，不因捲動而移動 */
+    top: 0;            /* 確保 header 貼齊頂端 */
+}
+
+h1 {
+    color: white;
+    position: absolute;   /* 位置使用絕對模式 */
+    left: 120px;
+    top: 0;
+    line-height: 80px;
+    background-image: url(images/CppLogo.jpeg);
+    background-repeat: no-repeat;   /* 只顯示一張圖片 */
+    background-position: center;
+    /* 讓圖片等比例縮小 */
+    background-size: contain;  
+    width: 210px;
+    height: 80px;           /* 給定高度，圖片會依比例縮放塞進來 */
+    text-indent: -9999px;   /* 把h1文字推到後面以便用戶看不見，但有利搜尋 */
+}
+
+/* 導航欄 */
+header ul {
+    position: absolute;   /* 位置使用絕對模式 */
+    right: 5vw;           /* 視窗寬度的5% */
+    top: 0;
+    line-height: 80px;
+}
+
+header li {
+    display: inline;
+    margin-right: 4vw;    /* 視窗寬度的4% */
+}
+
+header a {
+    color: black;      /* 設定字體顏色為黑色 */
+    font-weight: bold;   /* 加粗字體。600為半粗，700為bold，900為最粗 */
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* 「Overview」Section：左右並排                                               */
+/* ------------------------------------------------------------------------- */
+
+/* 核心佈局：使用 Flexbox */
+.overview {
+    display: flex; /* 啟用彈性盒子佈局 */
+    flex-wrap: wrap; /* 小螢幕時會自動換行 */
+    align-items: center; /* 讓兩個子區塊垂直對齊，確保等高 */
+    width: 80%; /* 設定容器寬度 */
+    max-width: 1200px;
+    margin: 50px auto; /* 讓容器在頁面中置中 */
+    background-color: #fff;
+    overflow: hidden; /* 確保內容不會超出邊界 */
+}
+
+.overview h2{
+    text-align: left;   /* 靠左對齊 */
+    font-size: 32px;    /* 放大字體 */
+}
+
+/* 子區塊樣式 */
+.overview-text,
+.overview-image {
+    flex: 1; /* 讓兩個區塊平均分配空間，實現等寬 */
+    padding: 40px;
+    height: 100%; /* 繼承父容器高度 */
+    box-sizing: border-box; /* 確保內距不會撐大區塊 */
+}
+
+/* 左側文字區塊的內容置中 */
+.overview-text {
+    text-align: center; /* 文字內容本身水平置中 */
+}
+
+.overview-text h2 {
+    margin-top: 10px;
+} 
+
+.overview-text li {
+    margin-top: 10px;
+    text-align: left;   /* 靠左對齊 */
+} 
+
+/* 右側圖片區塊的內容置中 */
+.overview-image {
+    display: flex;
+    justify-content: center; /* 水平置中 */
+    align-items: center; /* 垂直置中 */
+}
+
+/* 圖片樣式：確保圖片在區塊內自動調整大小 */
+.overview-image img {
+    max-width: 100%; /* 圖片寬度不超過容器 */
+    height: auto; /* 高度自動調整，保持比例 */
+    display: block; /* 移除圖片底部的空白間隙 */
+    border-radius: 8px;
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* 「Features」Section                                                       */
+/* ------------------------------------------------------------------------- */
+
+.features-title {
+    text-align: center;
+} 
+
+.features-title h2 {
+    margin-top: 10px;
+    font-size: 32px;   /* 放大字體 */
+} 
+
+.features-title p {
+    margin-top: 20px;
+} 
+
+/* 設定父容器為網格佈局：2X4排列 */
+.features {
+    display: grid;
+    /* 建立 4 個等寬的欄位 */
+    grid-template-columns: repeat(4, 1fr);
+    /* 建立 2 個等高的列 */
+    grid-template-rows: repeat(2, auto);
+    /* 設定網格間距 */
+    gap: 20px;
+    
+    /* 額外美化樣式 */
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 8px;
+}
+
+/* 網格項目樣式 */
+.feature {
+    background-color: #fff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feature p {
+    text-align: left;   /* 靠左對齊 */
+    margin-top: 20px;
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* 「Industry」Section                                                       */
+/* ------------------------------------------------------------------------- */
+
+/* 核心佈局：使用 Flexbox */
+.industry {
+    display: flex; /* 啟用彈性盒子佈局 */
+    flex-wrap: wrap; /* 小螢幕時會自動換行 */
+    align-items: center; /* 讓兩個子區塊垂直對齊，確保等高 */
+    width: 80%; /* 設定容器寬度 */
+    max-width: 1200px;
+    margin: 50px auto; /* 讓容器在頁面中置中 */
+    background-color: #fff;
+    overflow: hidden; /* 確保內容不會超出邊界 */
+}
+
+/* 子區塊樣式 */
+.industry-text,
+.industry-image {
+    flex: 1; /* 讓兩個區塊平均分配空間，實現等寬 */
+    padding: 40px;
+    height: 100%; /* 繼承父容器高度 */
+    box-sizing: border-box; /* 確保內距不會撐大區塊 */
+}
+
+/* 左側文字區塊的內容置中 */
+.industry-text {
+    text-align: center; /* 文字內容本身水平置中 */
+}
+
+.industry-text h2 {
+    margin-top: 10px;
+    font-size: 32px;    /* 放大字體 */
+    text-align: left;   /* 靠左對齊 */
+} 
+
+.industry-text p {
+    margin-top: 20px;
+    text-align: left;   /* 靠左對齊 */
+} 
+
+/* 右側圖片區塊的內容置中 */
+.industry-image {
+    display: flex;
+    justify-content: center; /* 水平置中 */
+    align-items: center; /* 垂直置中 */
+}
+
+/* 圖片樣式：確保圖片在區塊內自動調整大小 */
+.industry-image img {
+    max-width: 100%; /* 圖片寬度不超過容器 */
+    height: auto; /* 高度自動調整，保持比例 */
+    display: block; /* 移除圖片底部的空白間隙 */
+    border-radius: 8px;
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* 「標準與合規」Section                                                       */
+/* ------------------------------------------------------------------------- */
+
+.standards-title {
+    text-align: center;
+} 
+
+.standards-title h2 {
+    margin-top: 10px;
+    font-size: 32px;   /* 放大字體 */
+} 
+
+.standards-title p {
+    margin-top: 20px;
+} 
+
+/* 設定父容器為網格佈局 */
+.standards {
+    display: grid;
+    /* 建立 4 個等寬的欄位。fr 單位表示可用的空間分數，所以 1fr 會讓所有欄位平均分配空間 */
+    grid-template-columns: repeat(4, 1fr);
+    /* 將網格項目對齊到行尾，這會讓所有項目高度相同 */
+    align-items: stretch;
+    /* 設定網格項目間的間距 */
+    gap: 20px;
+    
+    /* 額外美化樣式 */
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 網格項目樣式 */
+.standard {
+    background-color: #fff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.standard {
+    text-align: center;
+} 
+
+.standard h3 {
+    margin-top: 10px;
+} 
+
+.standard p {
+    margin-top: 20px;
+    text-align: left;   /* 靠左對齊 */
+}
+
+.standard ul {
+    margin-top: 20px;
+    text-align: left;   /* 靠左對齊 */
+}
+
+.standard li {
+    margin-top: 10px;
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* 「Information」Section                                                       */
+/* ------------------------------------------------------------------------- */
+
+/* 父容器：使用 Flexbox 實現垂直堆疊 */
+.info-section-container {
+    display: flex;
+    flex-direction: column; /* **重要：讓子區塊垂直排列** */
+    align-items: center; /* 讓所有子區塊水平置中 */
+    background-color: #fff;
+    padding: 20px 20px;   /* section上、下空白間隔*/
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+/* 頂端 Logo 區塊 */
+.top-logo {
+    width: 100%; /* 讓 Logo 容器與下方三欄同寬 */
+    text-align: left; /* 讓圖片在區塊內靠左對齊 */
+    margin-left: 40px; /* Logo 與左邊的間距 */
+}
+
+.logo-img {
+    /* **重要：設定圖片寬度為 15%，並保持等比例** */
+    width: 15%;
+    height: auto;
+}
+
+/* 包裝底下三個區塊的容器 */
+.info-blocks-wrapper {
+    display: flex;
+    flex-direction: row; /* **讓三個子區塊水平排列** */
+    width: 100%; /* 確保容器寬度為 100% */
+    flex-wrap: wrap;
+}
+
+/* 子區塊：設定均分寬度 */
+.info-block {
+    flex: 1; /* 讓三個區塊均分可用空間 */
+    padding: 20px;
+    text-align: left; /* 左區塊與中區塊的文字靠左對齊 */
+}
+
+/* 調整：左區塊文字樣式 */
+.left-block {
+    text-align: left;
+}
+
+.left-block h3 {
+    margin-bottom: 15px; 
+    margin-top: 0;
+}
+
+.company-name {
+    margin-top: 15px; 
+}
+
+.company-link {
+    color: inherit;          /* 保持跟原文字一樣顏色 */
+    text-decoration: none;   /* 預設不顯示底線 */
+}
+
+.company-link:hover {
+    text-decoration: underline; /* 滑鼠移過去顯示底線 */
+}
+
+.address {
+    margin-top: 15px; 
+}
+
+/* 中區塊：聯絡資訊 */
+.middle-block h3 {
+    margin-bottom: 15px; 
+    margin-top: 0;
+}
+
+.phone-number {
+    margin-bottom: 15px; 
+}
+
+/* 右區塊的服務按鈕樣式 */
+.service-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 50px;
+    margin: 0 auto;
+    border: 2px solid #ff7f00;
+    background-color: #fff;
+    color: #ff7f00;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* 鼠標移到按鈕上時的變化 */
+.service-button:hover {
+    background-color: #ff7f00;
+    color: #fff;
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* 「Footer」Section                                                          */
+/* ------------------------------------------------------------------------- */
+
+/* 設定頁腳的整體樣式 */
+footer {
+    background-color: #f4f4f4;
+    padding: 40px 0; /* 上下間距設定為 40px */
+    text-align: center; /* 讓內部文字水平置中 */
+}
+
+/* 設定版權文字的樣式 */
+footer p {
+    color: #333; /* 偏灰色的黑色字體 */
+    margin: 0; /* 移除 p 標籤預設的邊距 */
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* 「聯絡我們」網頁                                                          */
+/* ------------------------------------------------------------------------- */
+
+.contact-page {
+    /* 這裡放專屬於此頁面的樣式 */
+    margin: 80px auto; /* 讓容器在頁面中置中 */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+/* 表單佈局樣式 */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 將星號的顏色設定為紅色 */
+.required {
+    color: red;
+    margin-left: 0px; /* 增加一些與文字的間距。可設為5px */
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="phone"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* 讓內距不會撐大方塊 */
+    resize: vertical; /* 調整：「問題」方塊只允許垂直調整大小 */
+    transition: border-color 0.3s;
+    font-size: 1rem; /* 放大字體大小 */
+    height: 42px;   /* 與文字輸入框等高 */
+    background-color: #fff; /* 與輸入框一致的底色 */
+    box-shadow: none; /* 移除陰影效果 */
+}
+
+/* 下拉選單的 placeholder 顏色 */
+select option[value=""] {
+    color: #666; /* 淡灰色 */
+}
+
+/* 核心樣式：當輸入框被點擊時，邊框變為橘色 */  
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="phone"]:focus,
+textarea:focus,
+select:focus {
+    outline: none; /* 移除瀏覽器預設的外框 */
+    border-color: #ff7f00; /* 邊框變為橘色 */
+}
+
+/* 新增：警語樣式 */
+.disclaimer {
+    font-size: 0.85em; /* 這裡設定您想要的字體大小 */
+    color: #666; /* 偏灰的顏色 */
+    margin-top: 10px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+/* 提交按鈕樣式 */
+.submit-button {
+    background-color: #ff7f00;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* 核心樣式：鼠標懸停時的浮動效果 */
+.submit-button:hover {
+    transform: translateY(-3px); /* 向上浮起 3 像素 */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* 增加陰影，強化浮動感 */
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* 新增RWD響應式設定                                                           */
+/* ------------------------------------------------------------------------- */
+
+/* overview & industry 區塊在小螢幕自動換行 */
+.overview,
+.industry {
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .overview-text,
+    .overview-image,
+    .industry-text,
+    .industry-image {
+        flex: 1 1 100%; /* 每個區塊都占滿整行 */
+    }
+
+    .features,
+    .standards {
+        grid-template-columns: repeat(2, 1fr); /* 平板 2 欄 */
+    }
+}
+
+@media (max-width: 480px) {
+    .features,
+    .standards {
+        grid-template-columns: 1fr; /* 手機 1 欄 */
+    }
+}
