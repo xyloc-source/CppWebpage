@@ -915,6 +915,15 @@ select:focus {
     flex-wrap: wrap;
 }
 
+.form-inner {
+    display: flex;
+    gap: 16px;
+}
+
+.form-inner select {
+    width: 30%;
+}
+
 @media (max-width: 768px) {
     .overview-text,
     .overview-image,
@@ -937,4 +946,7 @@ select:focus {
     .standards {
         grid-template-columns: 1fr;
     }
+    .form-inner select {
+    width: 40%;
+}
 }
