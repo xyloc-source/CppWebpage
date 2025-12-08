@@ -1,82 +1,171 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- 設定為響應式網頁-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 設定為響應式網頁-->
     <title>Cppcheck Premium</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mukta:wght@200;300;400;500;600;700;800&family=Noto+Sans+TC:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-  <header>
+  <body>
+    <header>
       <h1>Cppcheck Premium</h1>
       <nav>
-          <ul>
-              <li><a href="#overview">概述</a></li>
-              <li><a href="#features-title">產品特點</a></li>
-              <li><a href="#industry">產業應用</a></li>
-              <li><a href="#standards">資安與標準支援</a></li>
-              <li><a href="#info">聯絡我們</a></li>
+        <ul>
+          <li class="menu-close">
+            <button>
+              <svg
+                height="329pt"
+                viewBox="0 0 329.26933 329"
+                width="329pt"
+                xmlns="http://www.w3.org/2000/svg"
+                id="fi_1828778"
+              >
+                <path
+                  d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"
+                ></path>
+              </svg>
+            </button>
+          </li>
+          <li><a href="#overview">概述</a></li>
+          <li><a href="#features-title">產品特點</a></li>
+          <li><a href="#industry">產業應用</a></li>
+          <li><a href="#standards">資安與標準支援</a></li>
+          <li><a href="#info">聯絡我們</a></li>
+        </ul>
+        <div class="lang">
+          <button class="lang_active header_btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="512"
+              height="512"
+              viewBox="0 0 32 32"
+              id="fi_3059430"
+            >
+              <g id="Layer_3" data-name="Layer 3">
+                <path
+                  d="M16,1A15,15,0,1,0,31,16,15.017,15.017,0,0,0,16,1Zm0,28c-2.065,0-4.227-2.662-5.3-7H21.3C20.227,26.338,18.065,29,16,29Zm-5.706-9a27.358,27.358,0,0,1,0-8H21.706A26.651,26.651,0,0,1,22,16a26.651,26.651,0,0,1-.294,4ZM3,16a12.94,12.94,0,0,1,.636-4h4.65a28.115,28.115,0,0,0,0,8H3.636A12.94,12.94,0,0,1,3,16ZM16,3c2.065,0,4.227,2.662,5.3,7H10.7C11.773,5.662,13.935,3,16,3Zm7.714,9h4.65a12.9,12.9,0,0,1,0,8h-4.65A28.351,28.351,0,0,0,24,16,28.351,28.351,0,0,0,23.714,12Zm3.807-2H23.354a16.766,16.766,0,0,0-2.567-6.075A13.063,13.063,0,0,1,27.521,10ZM11.213,3.925A16.766,16.766,0,0,0,8.646,10H4.479A13.063,13.063,0,0,1,11.213,3.925ZM4.479,22H8.646a16.766,16.766,0,0,0,2.567,6.075A13.063,13.063,0,0,1,4.479,22Zm16.308,6.075A16.766,16.766,0,0,0,23.354,22h4.167A13.063,13.063,0,0,1,20.787,28.075Z"
+                ></path>
+              </g>
+            </svg>
+          </button>
+          <ul class="lang_list">
+            <li><a href="" class="active">繁體中文</a></li>
+            <li><a href="">简体中文</a></li>
+            <li><a href="">English</a></li>
           </ul>
+        </div>
+        <button class="menu header_btn">
+          <svg
+            height="384pt"
+            viewBox="0 -53 384 384"
+            width="384pt"
+            xmlns="http://www.w3.org/2000/svg"
+            id="fi_1828859"
+          >
+            <path
+              d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
+            ></path>
+            <path
+              d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
+            ></path>
+            <path
+              d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
+            ></path>
+          </svg>
+        </button>
       </nav>
-  </header>
+    </header>
 
-  <main>
+    <main>
       <!-- 概述 -->
       <section class="overview" id="overview">
         <div class="overview-text">
           <h2>Cppcheck</h2>
+          <p>
+            Cppcheck 於 2010 年起源自開源專案，歷經十餘年技術累積，於 2021
+            年正式邁向商業化，現已發展為全球廣受信賴的靜態程式碼分析解決方案。
+          </p>
           <ul>
-            <li><strong>源自瑞典的專業工具：</strong> Cppcheck Premium 是一款由瑞典公司 Cppcheck Solutions AB 開發的靜態程式碼分析工具，專為 C/C++ 語言設計。</li>
-            <li><strong>高階檢測，認證合規：</strong> 旨在提供更進階的檢查 、 開發認證與符合產業標準的合規性。</li>
-            <li><strong>深獲開發者信賴：</strong> Cppcheck 在全球 C/C++ 開發社群中享有高度聲譽，其開源版本因高效能和精準的錯誤偵測能力而備受推崇，付費的 Premium 版本則進一步提供企業級功能與專業支援。</li>
-            <li><strong>提升程式碼品質與安全性：</strong> 透過深入分析原始碼，Cppcheck Premium 能自動識別潛在的錯誤、記憶體洩漏、未定義行為和安全漏洞，顯著提升軟體品質並降低維護成本。</li>
+            <li>
+              <strong>源自瑞典的專業工具</strong> <br />Cppcheck Premium
+              是一款由瑞典公司 Cppcheck Solutions AB
+              開發的靜態程式碼分析工具，專為 C/C++ 語言設計。
+            </li>
+            <li>
+              <strong>高階檢測，認證合規</strong> <br />旨在提供更進階的檢查
+              ，以利開發認證與符合產業標準規範。
+            </li>
+            <li>
+              <strong>深獲開發者信賴</strong> <br />Cppcheck 在全球 C/C++
+              開發社群中享有高度聲譽，其開源版本因高效能和精準的錯誤偵測能力而備受推崇，付費的
+              Premium 版本則進一步提供企業級功能與專業支援。
+            </li>
+            <li>
+              <strong>提升程式碼品質與安全性</strong>
+              <br />透過深入分析原始碼，Cppcheck Premium
+              能自動識別潛在的錯誤、記憶體洩漏、緩衝區溢位、未定義行為和安全漏洞，顯著提升軟體品質並降低維護成本。
+            </li>
           </ul>
-        </div>      
+        </div>
         <div class="overview-image">
-          <img src="images/Software programming_cppcheck_30p.png" alt="Cppcheck Tool">
+          <img
+            src="images/Software programming_cppcheck_30p.png"
+            alt="Cppcheck Tool"
+          />
         </div>
       </section>
 
-     <!-- 產品特點 -->
-      <section class="features-title" id="features-title">
-        <h5>強大的功能</h5>
-        <h2>為什麼要使用Cppcheck？</h2>
-        <p>Cppcheck 是 C/C++ 程式的靜態分析工具。它提供了獨特的程式分析來檢測錯誤，<br>並在檢測未定義的行為和危險的編碼結構方面排名最高。</p>
-      </section>
-     <section class="features">
-        <div class="feature">
-          <h3>即時原碼分析</h3>
-          <p>無需編譯，即可偵測語法錯誤、效能瓶頸、資安風險，提升效率與品質。</p>            
+      <!-- 產品特點 -->
+      <section class="features-wrap">
+        <div class="features-title" id="features-title">
+          <p class="features-subtitle">強大的功能</p>
+          <h2>為什麼要使用Cppcheck？</h2>
+          <p>
+            Cppcheck 是 C/C++
+            程式的靜態分析工具。它提供了獨特的程式分析來檢測錯誤，<br />並在檢測未定義的行為和危險的編碼結構方面排名最高。
+          </p>
         </div>
-        <div class="feature">
-          <h3>無誤報率</h3>
-          <p>語意分析技術精準，協助團隊聚焦真實問題。</p>            
-        </div>
-        <div class="feature">
-          <h3>快速部署</h3>
-          <p>30 分鐘內即可啟用，無需 License Server，介面直覺。</p>            
-        </div>
-        <div class="feature">
-          <h3>輕量高效</h3>
-          <p>分析速度快，資源佔用低，命令列即可執行。</p>            
-        </div>
-        <div class="feature">
-          <h3>標準相容</h3>
-          <p>支援 MISRA、AUTOSAR、CERT、ISO 26262、IEC 62304 等。</p>            
-        </div>
-        <div class="feature">
-          <h3>離線執行支援</h3>
-          <p>可在離線 Air-gap 環境中全離線運行，符合高資安需求。</p>            
-        </div>
-        <div class="feature">
-          <h3>高整合性</h3>
-          <p>易於串接 CI/DevOps 自動化流程。</p>            
-        </div>
-        <div class="feature">
-          <h3>彈性輸出格式</h3>
-          <p>支援 text/XML/plist 等格式，便於後續整合。</p>            
+        <div class="features">
+          <div class="feature">
+            <h3>即時原碼分析</h3>
+            <p>編譯前即可偵測語法錯誤、效能瓶頸、資安風險，提升效率與品質。</p>
+          </div>
+          <div class="feature">
+            <h3>無誤報率</h3>
+            <p>語意分析技術精準，協助團隊聚焦真實問題。</p>
+          </div>
+          <div class="feature">
+            <h3>快速部署</h3>
+            <p>30 分鐘內即可啟用，無需 License Server，介面直覺。</p>
+          </div>
+          <div class="feature">
+            <h3>輕量高效</h3>
+            <p>分析速度快，資源佔用低，命令列即可執行。</p>
+          </div>
+          <div class="feature">
+            <h3>標準相容</h3>
+            <p>支援 MISRA、AUTOSAR、CERT、ISO 26262、IEC 62304 等。</p>
+          </div>
+          <div class="feature">
+            <h3>支援離線執行</h3>
+            <p>可在 Air-gap 環境中全離線運行，符合高資安需求。</p>
+          </div>
+          <div class="feature">
+            <h3>高整合性</h3>
+            <p>易於串接 CI/DevOps 自動化流程。</p>
+          </div>
+          <div class="feature">
+            <h3>彈性輸出格式</h3>
+            <p>支援 text/XML/json 等格式，便於後續整合及客製報告。</p>
+          </div>
         </div>
       </section>
 
@@ -84,23 +173,51 @@
       <section class="industry" id="industry">
         <div class="industry-text">
           <h2>深受全世界行業的信任</h2>
-          <p>Cppcheck 受到全球各個行業的工程師的信任，如<strong>汽車、航天、醫療技術、國防、鐵路、消費電子、工業裝置、金融、電信</strong>。</p>
-          <p>Cppcheck 的社群每天都在成長。其程式庫託管於 Github，擁有超過 <strong>5,000 顆星標、27,000 多次提交、5,000 多個已關閉的Pull Request，以及超過 300 位活躍的貢獻者</strong>。</p>
+          <p>
+            Cppcheck 受到全球各個行業工程師的信任，如<strong
+              >汽車、航天、醫療技術、國防、鐵路、消費電子、工業裝置、金融、電信等。</strong
+            ><br /><br>
+            Cppcheck 的社群每天都在成長。其程式庫託管於 Github，擁有
+          </p>
+          <div class="industry_info">
+            <div class="industry_info_item">
+              <h3>5000+</h3>
+              <p>顆星標</p>
+            </div>
+            <div class="industry_info_item">
+              <h3>27000+</h3>
+              <p>次提交</p>
+            </div>
+            <div class="industry_info_item">
+              <h3>5000+</h3>
+              <p>已關閉Pull Request</p>
+            </div>
+            <div class="industry_info_item">
+              <h3>300+</h3>
+              <p>活躍貢獻者</p>
+            </div>
+          </div>
         </div>
         <div class="industry-image">
-          <img src="images/World_map.png" alt="industry">
+          <img src="images/World_map.png" alt="industry" />
         </div>
       </section>
 
       <!-- 安全標準與合規 -->
-      <section class="standards-title" id="standards-title">
+       <section class="standards-wrap">
+<div class="standards-title" id="standards-title">
         <h2>助力企業提升品質與安全</h2>
-        <p>Cppcheck 提供專業的 C/C++ 靜態程式碼分析解決方案，全面支援國際編碼規範與合規要求，並通過多項工具認證。<br>透過即時檢測與完整報告，協助企業強化程式碼品質，確保產品安全與可靠，滿足關鍵產業的嚴格標準。</p>
-      </section>
-      <section class="standards" id="standards">
+        <p>
+          Cppcheck 提供專業的 C/C++
+          靜態程式碼分析解決方案，全面支援國際編碼規範與合規要求，並通過多項工具認證。<br />透過即時檢測與完整報告，協助企業強化程式碼品質，確保產品安全與可靠，滿足關鍵產業的嚴格標準。
+        </p>
+      </div>
+      <div class="standards" id="standards">
         <div class="standard">
           <h3>功能安全</h3>
-          <p>支援多項國際功能安全標準，涵蓋醫療、汽車、鐵路及一般安全系統，協助企業落實高安全等級的軟體開發。</p>
+          <p>
+            支援多項國際功能安全標準，涵蓋醫療、汽車、鐵路及一般安全系統，協助企業落實高安全等級的軟體開發。
+          </p>
           <ul>
             <li>ISO 62304（醫療器械軟體）</li>
             <li>IEC 61508（一般安全相關系統）</li>
@@ -110,7 +227,9 @@
         </div>
         <div class="standard">
           <h3>汽車軟體編碼規範</h3>
-          <p>完整支援主流車用軟體編碼規範，確保車控系統在開發階段即可降低資安與潛在風險。</p>
+          <p>
+            完整支援主流車用軟體編碼規範，確保車控系統在開發階段即可降低資安與潛在風險。
+          </p>
           <ul>
             <li>MISRA C 2023</li>
             <li>MISRA C++ 2008</li>
@@ -120,7 +239,9 @@
         </div>
         <div class="standard">
           <h3>網路安全</h3>
-          <p>提供國際公認的網路安全檢測規範，協助開發團隊加強程式碼追溯性並控管風險。</p>
+          <p>
+            提供國際公認的網路安全檢測規範，協助開發團隊加強程式碼追溯性並控管風險。
+          </p>
           <ul>
             <li>CWE 前25項</li>
             <li>CERT C 2016</li>
@@ -130,47 +251,58 @@
         </div>
         <div class="standard">
           <h3>合規與認證</h3>
-          <p>通過第三方安全認證，適用於交通控制、導航與車聯網環境，確保系統合規與安全可靠。</p>
+          <p>
+            通過第三方安全認證，適用於交通控制、導航與車聯網環境，確保系統合規與安全可靠。
+          </p>
           <ul>
-            <li>TÜV SÜD 認證（符合 IEC 61508 與 ISO 26262 的第三方安全認證）</li>
+            <li>
+              TÜV SÜD 認證（符合 IEC 61508 與 ISO 26262 的第三方安全認證）
+            </li>
           </ul>
         </div>
-      </section>
+      </div>
+    </section>
+      
 
       <!-- 安聯繫我們 -->
-      <section class="info-section-container", id="info">
-          <div class="top-logo">
-              <img src="images/CppLogo.jpeg" alt="公司 Logo" class="logo-img">
+      <section class="info-section-container" , id="info">
+        <div class="top-logo">
+          <img src="images/CppLogo.jpeg" alt="公司 Logo" class="logo-img" />
+        </div>
+
+        <div class="info-blocks-wrapper">
+          <div class="info-block left-block">
+            <h3>中華區總代理</h3>
+            <p class="company-name">
+              <a
+                href="https://www.watsonbell.com"
+                target="_blank"
+                class="company-link"
+              >
+                逸松股份有限公司
+              </a>
+            </p>
+            <p class="address">23553 新北市中和區連城路268號13樓之4</p>
           </div>
-          
-          <div class="info-blocks-wrapper">
-              <div class="info-block left-block">
-                  <h3>中華區總代理</h3>
-                  <p class="company-name">
-                      <a href="https://www.watsonbell.com" target="_blank" class="company-link">
-                          逸松股份有限公司
-                      </a>
-                  </p>
-                  <p class="address">23553 新北市中和區連城路268號13樓之4</p>
-              </div>
-  
-              <div class="info-block middle-block">
-                  <h3>電話 | 電子郵件</h3>
-                  <p class="phone-number">電話：02-8227-8050</p>
-                  <p class="email-address">E-mail：service@watsonbell.com</p>
-              </div>
-  
-              <div class="info-block right-block">
-                  <a href="service-page.html" class="service-button">服務支持</a>
-              </div>
+
+          <div class="info-block middle-block">
+            <h3>電話 | 電子郵件</h3>
+            <p class="phone-number">電話：02-8227-8050</p>
+            <p class="email-address">E-mail：service@watsonbell.com</p>
           </div>
+
+          <div class="info-block right-block">
+            <a href="service-page.html" class="service-button">服務支持</a>
+          </div>
+        </div>
       </section>
     </main>
 
-  <footer>
-    <p>版權所有 copyright © 2025 watsonbell.com Inc. All Rights Reserved.</p>
-  </footer>
+    <footer>
+      <p>版權所有 copyright © 2025 watsonbell.com Inc. All Rights Reserved.</p>
+    </footer>
 
-</body>
-
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/common.js"></script>
+  </body>
 </html>
