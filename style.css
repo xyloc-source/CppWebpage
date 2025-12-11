@@ -130,6 +130,12 @@ header a:hover {
     position: relative;
 }
 
+.header_btns {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 .header_btn {
     display: flex;
     align-items: center;
@@ -196,6 +202,39 @@ header a:hover {
     display: none;
 }
 
+.qrcode {
+    position: relative;
+}
+
+.qrcode_list {
+    position: absolute;
+    top: calc(100% + 4px);
+    right: 0;
+    list-style: none;
+    padding: 8px 8px 16px;
+    margin: 0;
+    background-color: #fff;
+    display: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.qrcode_list_inner {
+    display: flex;
+    gap: 16px;
+}
+
+.qrcode_list img {
+    width: 200px;
+}
+
+.qrcode-item p {
+    text-align: center;
+    margin: 0;
+    color: #FF6C00;
+    font-weight: 500;
+    margin-top: -10px;
+}
+
 @media screen and (max-width: 1024px) {
     header {
         padding: 0 40px;
@@ -238,6 +277,10 @@ header a:hover {
 
     .menu {
         display: flex;
+    }
+
+    .qrcode_list_inner {
+        flex-direction: column;
     }
 }
 
@@ -663,16 +706,55 @@ header a:hover {
     margin-bottom: 20px;
 }
 
+.info-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.info-qrcode {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+}
+
+.info-qrcode img {
+    width: 100px;
+}
+
+.info-qrcode .qrcode-item p {
+    margin-top: -5px;
+    color: #000;
+}
+
+.info-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.info-link {
+    font-size: 14px;
+    color: var(--gray);
+    text-decoration: none;
+}
+
+.info-link:hover {
+    color: var(--primary-color);
+}
+
 /* 頂端 Logo 區塊 */
 .top-logo {
-    width: 100%; /* 讓 Logo 容器與下方三欄同寬 */
+    width: 130px;
     text-align: left; /* 讓圖片在區塊內靠左對齊 */
     padding-left: 20px;
 }
 
 .logo-img {
     /* **重要：設定圖片寬度為 15%，並保持等比例** */
-    width: 15%;
+    width: 100%;
     height: auto;
 }
 
@@ -681,6 +763,7 @@ header a:hover {
     display: flex;
     width: 100%; /* 確保容器寬度為 100% */
     flex-wrap: wrap;
+    align-items: center;
 }
 
 /* 子區塊：設定均分寬度 */
@@ -693,6 +776,10 @@ header a:hover {
 /* 調整：左區塊文字樣式 */
 .left-block {
     text-align: left;
+}
+
+.right-block {
+    padding-right: 0;
 }
 
 .info-block h3 {
@@ -728,22 +815,52 @@ header a:hover {
     }
 }
 
+@media  screen and (max-width: 767px) {
+    .info-top {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+        position: relative;
+    }
+    .info-links {
+        padding-left: 20px;
+    }
+    .service-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+    }
+}
+
 @media (max-width: 480px) {
     .info-section-container {
         padding: 40px 20px;
     }
     .top-logo {
         padding-left: 0;
-        padding-bottom: 20px;
     }
-    .logo-img {
-        width: 50%;
+    .info-top {
+        margin-bottom: 0;
+    }
+    .info-links {
+        padding: 0;
+        flex-wrap: wrap;
+    }
+    .info-links a:first-child {
+        order: 2;
+    }
+    .info-links a:nth-child(2) {
+        order: 3;
     }
     .info-block {
         padding-left: 0;
         padding-right: 0;
         width: 100%;
         flex: auto;
+    }
+    .info-qrcode {
+        justify-content: flex-start;
     }
 }
 
@@ -770,6 +887,17 @@ header a:hover {
 .service-button:hover {
     background-color: #ff7f00;
     color: #fff;
+}
+
+@media (max-width: 480px) {
+    .service-button {
+        position: static;
+        width: 100%;
+        margin: 8px 0 0;
+        order: 1;
+        transform: none;
+    }
+
 }
 
 
@@ -924,6 +1052,12 @@ select:focus {
     width: 30%;
 }
 
+.form_bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
 @media (max-width: 768px) {
     .overview-text,
     .overview-image,
@@ -948,5 +1082,19 @@ select:focus {
     }
     .form-inner select {
     width: 40%;
+}
+.disclaimer {
+    margin: 0;
+}
+.form_bottom {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+.submit-row {
+    width: 100%;
+}
+.submit-button {
+    width: 100%;
 }
 }

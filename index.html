@@ -35,11 +35,12 @@
             </button>
           </li>
           <li><a href="#overview">概述</a></li>
-          <li><a href="#features-title">產品特點</a></li>
+          <li><a href="#features-wrap">產品特點</a></li>
           <li><a href="#industry">產業應用</a></li>
-          <li><a href="#standards">資安與標準支援</a></li>
+          <li><a href="#standards-wrap">資安與標準支援</a></li>
           <li><a href="#info">聯絡我們</a></li>
         </ul>
+        <div class="header_btns">
         <div class="lang">
           <button class="lang_active header_btn">
             <svg
@@ -62,6 +63,23 @@
             <li><a href="">English</a></li>
           </ul>
         </div>
+        <div class="qrcode">
+          <div class="qrcode_active header_btn">
+            <svg clip-rule="evenodd" fill-rule="evenodd" height="512" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 28 28" width="512" xmlns="http://www.w3.org/2000/svg" id="fi_8618309"><g transform="translate(-168 -84)"><g id="Icon"><g transform="matrix(.5 0 0 .5 110.525 89.5)"><path d="m141 3c0-1.105-.895-2-2-2h-10c-1.105 0-2 .895-2 2v10c0 1.105.895 2 2 2h10c1.105 0 2-.895 2-2zm-4 2v6h-6v-6z"></path></g><g transform="translate(1 1)"><path d="m176 85h-6c-.552 0-1 .448-1 1v6c0 .552.448 1 1 1s1-.448 1-1v-5h5c.552 0 1-.448 1-1s-.448-1-1-1z"></path></g><g transform="matrix(-1 0 0 1 363 1)"><path d="m176 87h-5v5c0 .552-.448 1-1 1s-1-.448-1-1v-6c0-.552.448-1 1-1h6c.552 0 1 .448 1 1s-.448 1-1 1z"></path></g><g transform="matrix(-1 0 0 -1 363 195)"><path d="m176 85h-6c-.552 0-1 .448-1 1v6c0 .552.448 1 1 1s1-.448 1-1v-5h5c.552 0 1-.448 1-1s-.448-1-1-1z"></path></g><g transform="matrix(1 0 0 -1 1 195)"><path d="m176 87h-5v5c0 .552-.448 1-1 1s-1-.448-1-1v-6c0-.552.448-1 1-1h6c.552 0 1 .448 1 1s-.448 1-1 1z"></path></g><g transform="matrix(.5 0 0 .5 119.492 89.5)"><path d="m141 3c0-1.105-.895-2-2-2h-10c-1.105 0-2 .895-2 2v10c0 1.105.895 2 2 2h10c1.105 0 2-.895 2-2zm-4 2v6h-6v-6z"></path></g><g transform="matrix(.5 0 0 .5 110.5 98.5)"><path d="m141 3c0-1.105-.895-2-2-2h-10c-1.105 0-2 .895-2 2v10c0 1.105.895 2 2 2h10c1.105 0 2-.895 2-2zm-4 2v6h-6v-6z"></path></g><g transform="matrix(.2 0 0 .2 158.2 99.4)"><path d="m129 3h10v10h-10z"></path></g><g transform="matrix(.2 0 0 .2 162.208 103.4)"><path d="m129 3h10v10h-10z"></path></g><g transform="matrix(.2 0 0 .2 160.2 101.4)"><path d="m129 3h10v10h-10z"></path></g><g transform="matrix(.2 0 0 .2 158.192 103.4)"><path d="m129 3h10v10h-10z"></path></g><g transform="matrix(.2 0 0 .2 162.2 99.4)"><path d="m129 3h10v10h-10z"></path></g></g></g></svg>
+          </div>
+          <div class="qrcode_list">
+            <div class="qrcode_list_inner">
+              <div class="qrcode-item">
+                <img src="./images/wechat.png" alt="">
+                <p>Wechat</p>
+              </div>
+              <div class="qrcode-item">
+                <img src="./images/line.png" alt="">
+                <p>Line</p>
+              </div>
+            </div>
+          </div>
+        </div>
         <button class="menu header_btn">
           <svg
             height="384pt"
@@ -81,6 +99,8 @@
             ></path>
           </svg>
         </button>
+
+        </div>
       </nav>
     </header>
 
@@ -124,7 +144,7 @@
       </section>
 
       <!-- 產品特點 -->
-      <section class="features-wrap">
+      <section class="features-wrap" id="features-wrap">
         <div class="features-title" id="features-title">
           <p class="features-subtitle">強大的功能</p>
           <h2>為什麼要使用Cppcheck？</h2>
@@ -175,8 +195,8 @@
           <h2>深受全世界行業的信任</h2>
           <p>
             Cppcheck 受到全球各個行業工程師的信任，如<strong
-              >汽車、航天、醫療技術、國防、鐵路、消費電子、工業裝置、金融、電信等。</strong
-            ><br /><br>
+              >汽車、航天、醫療技術、國防、鐵路、消費電子、軟體開發、工業裝置、金融、電信等。</strong
+            ><br /><br />
             Cppcheck 的社群每天都在成長。其程式庫託管於 Github，擁有
           </p>
           <div class="industry_info">
@@ -204,70 +224,79 @@
       </section>
 
       <!-- 安全標準與合規 -->
-       <section class="standards-wrap">
-<div class="standards-title" id="standards-title">
-        <h2>助力企業提升品質與安全</h2>
-        <p>
-          Cppcheck 提供專業 TÜV 認證的C/C++ 靜態程式碼分析工具，全面支援國際編碼規範與合規要求，並通過多項工具認證。
-透過即時檢測與完整報告，協助企業強化程式碼品質，確保產品安全與可靠，滿足關鍵產業的嚴格標準。<br />透過即時檢測與完整報告，協助企業強化程式碼品質，確保產品安全與可靠，滿足關鍵產業的嚴格標準。
-        </p>
-      </div>
-      <div class="standards" id="standards">
-        <div class="standard">
-          <h3>功能安全</h3>
+      <section class="standards-wrap" id="standards-wrap">
+        <div class="standards-title" id="standards-title">
+          <h2>助力企業提升品質與安全</h2>
           <p>
-            支援多項國際功能安全標準，涵蓋醫療、汽車、鐵路及一般安全系統，協助企業落實高安全等級的軟體開發。
+            Cppcheck 提供專業 TÜV 認證的C/C++
+            靜態程式碼分析工具，全面支援國際編碼規範與合規要求，並通過多項工具認證。
+            透過即時檢測與完整報告，協助企業強化程式碼品質，確保產品安全與可靠，滿足關鍵產業的嚴格標準。<br />透過即時檢測與完整報告，協助企業強化程式碼品質，確保產品安全與可靠，滿足關鍵產業的嚴格標準。
           </p>
-          <ul>
-            <li>ISO 62304（醫療器械軟體）</li>
-            <li>IEC 61508（一般安全相關系統）</li>
-            <li>ISO 26262（汽車功能安全）</li>
-            <li>EN 50128（鐵路軟體安全）</li>
-          </ul>
         </div>
-        <div class="standard">
-          <h3>汽車軟體編碼規範</h3>
-          <p>
-            完整支援主流車用軟體編碼規範，確保車控系統在開發階段即可降低資安與潛在風險。
-          </p>
-          <ul>
-            <li>MISRA C 2023</li>
-            <li>MISRA C++ 2008</li>
-            <li>MISRA C++ 2023</li>
-            <li>Autosar C++ 14</li>
-          </ul>
+        <div class="standards" id="standards">
+          <div class="standard">
+            <h3>功能安全</h3>
+            <p>
+              支援多項國際功能安全標準，涵蓋醫療、汽車、鐵路及一般安全系統，協助企業落實高安全等級的軟體開發。
+            </p>
+            <ul>
+              <li>IEC 62304（醫療器械軟體）</li>
+              <li>IEC 61508（一般安全相關系統）</li>
+              <li>ISO 26262（汽車功能安全）</li>
+              <li>EN 50128（鐵路軟體安全）</li>
+            </ul>
+          </div>
+          <div class="standard">
+            <h3>汽車軟體編碼規範</h3>
+            <p>
+              完整支援主流車用軟體編碼規範，確保車控系統在開發階段即可降低資安與潛在風險。
+            </p>
+            <ul>
+              <li>MISRA C 2023</li>
+              <li>MISRA C++ 2008</li>
+              <li>MISRA C++ 2023</li>
+              <li>Autosar C++ 14</li>
+            </ul>
+          </div>
+          <div class="standard">
+            <h3>網路安全</h3>
+            <p>
+              提供國際公認的網路安全檢測規範，協助開發團隊加強程式碼追溯性並控管風險。
+            </p>
+            <ul>
+              <li>CWE 前25項</li>
+              <li>CERT C 2016</li>
+              <li>CERT C++ 2016</li>
+              <li>ISO/IEC TS 17961: 2013/Cor 1: 2016</li>
+            </ul>
+          </div>
+          <div class="standard">
+            <h3>合規與認證</h3>
+            <p>
+              通過第三方安全認證，適用於交通控制、導航與車聯網環境，確保系統合規與安全可靠。
+            </p>
+            <ul>
+              <li>
+                TÜV SÜD 認證（符合 IEC 61508、EN50657、EN50716  與 ISO 26262 的第三方安全認證）
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="standard">
-          <h3>網路安全</h3>
-          <p>
-            提供國際公認的網路安全檢測規範，協助開發團隊加強程式碼追溯性並控管風險。
-          </p>
-          <ul>
-            <li>CWE 前25項</li>
-            <li>CERT C 2016</li>
-            <li>CERT C++ 2016</li>
-            <li>ISO/IEC TS 17961: 2013/Cor 1: 2016</li>
-          </ul>
-        </div>
-        <div class="standard">
-          <h3>合規與認證</h3>
-          <p>
-            通過第三方安全認證，適用於交通控制、導航與車聯網環境，確保系統合規與安全可靠。
-          </p>
-          <ul>
-            <li>
-              TÜV SÜD 認證（符合 IEC 61508 與 ISO 26262 的第三方安全認證）
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-      
+      </section>
 
       <!-- 安聯繫我們 -->
       <section class="info-section-container" , id="info">
+        <div class="info-top">
         <div class="top-logo">
           <img src="images/CppLogo.jpeg" alt="公司 Logo" class="logo-img" />
+        </div>
+        <div class="info-links">
+          <a class="info-link" href="https://cppcheck.sourceforge.io/">開源版連結 </a>
+          <a class="info-link" href="https://app-eu1.hubspotdocuments.com/documents/25267601/view/883134571?accessId=625c0a&hsLang=en">使用者授權協議下載 </a>
+          <a href="service-page.html" class="service-button">聯絡我們</a>
+        </div>
+            
+
         </div>
 
         <div class="info-blocks-wrapper">
@@ -292,7 +321,16 @@
           </div>
 
           <div class="info-block right-block">
-            <a href="service-page.html" class="service-button">聯絡我們</a>
+            <div class="info-qrcode">
+              <div class="qrcode-item">
+                <img src="./images/wechat.png" alt="">
+                <p>Wechat</p>
+              </div>
+              <div class="qrcode-item">
+                <img src="./images/line.png" alt="">
+                <p>Line</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

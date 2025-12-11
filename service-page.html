@@ -53,8 +53,8 @@
                         <option value="">醫療技術</option>
                         <option value="">國防</option>
                         <option value="">鐵路</option>
-                        <option value="">消費</option>
-                        <option value="">電子</option>
+                        <option value="">消費電子</option>
+                        <option value="">軟體開發</option>
                         <option value="">工業裝置</option>
                         <option value="">金融</option>
                         <option value="">電信</option>
@@ -74,14 +74,14 @@
             </div>
 
             <div class="form-row">
-                <label for="phone">通訊軟體帳號</label>
+                <label for="phone">通訊軟體帳號<span class="required">*</span></label>
                 <div class="form-inner">
-                    <select name="" id="">
+                    <select name="" id="" required>
                         <option value="">Wechat</option>
                         <option value="">Line</option>
                         <option value="">其他</option>
                     </select>
-                    <input type="text" id="media" name="media">
+                    <input type="text" id="media" name="media" readonly>
                 </div>
             </div>
 
@@ -119,9 +119,24 @@
                 您提供給我們的聯絡資訊，將作為我們提供產品與服務資訊之聯繫用途。當您提交訊息時，即表示您同意上述使用範圍。
             </p>
 
+            <div class="form_bottom">
+            <div class="info-qrcode">
+              <div class="qrcode-item">
+                <img src="./images/wechat.png" alt="">
+                <p>Wechat</p>
+              </div>
+              <div class="qrcode-item">
+                <img src="./images/line.png" alt="">
+                <p>Line</p>
+              </div>
+            </div>
             <div class="submit-row">
                 <button type="submit" class="submit-button">提交</button>
             </div>
+
+            </div>
+
+
     </form>
 
   </main>

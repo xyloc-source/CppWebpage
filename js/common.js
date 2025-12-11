@@ -3,6 +3,11 @@ $(".lang_active").click(function () {
     $(this).toggleClass("dropdown");
 });
 
+$(".qrcode_active").click(function () {
+  $(this).parents(".qrcode").find(".qrcode_list").slideToggle(300);
+  $(this).toggleClass("dropdown");
+});
+
 $(".menu").click(function () {
     $("header nav>ul").addClass("active");
 })
