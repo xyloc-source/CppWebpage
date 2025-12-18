@@ -58,8 +58,9 @@ header {
     z-index: 8;
 }
 
-h1 {
+h1 a {
     color: white;
+    display: block;
     /* position: absolute; */
     /* left: 120px; */
     top: 0;
@@ -444,10 +445,6 @@ header a:hover {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    /* background-color: #e9ecef; */
-    /* border-radius: 8px; */
-    /* padding: 40px !important; */
-    /* width: calc(100% - 40px); */
 }
 
 /* 網格項目樣式 */
@@ -506,6 +503,13 @@ header a:hover {
     }
     .features-title p br {
         display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .features-wrap {
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
 }
 
@@ -593,6 +597,12 @@ header a:hover {
 .industry-image {
     padding: 40px 0;
 }
+}
+
+@media screen and (max-width: 480px) {
+    .industry, .industry-image {
+        padding-bottom: 0;
+    }
 }
 
 
@@ -687,6 +697,13 @@ header a:hover {
     background-repeat: no-repeat;
     top: 2px;
     left: 0;
+}
+
+@media screen and (max-width: 480px) {
+    .standards-wrap {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
 }
 
 
@@ -835,7 +852,7 @@ header a:hover {
 
 @media (max-width: 480px) {
     .info-section-container {
-        padding: 40px 20px;
+        padding: 80px 20px 40px;
     }
     .top-logo {
         padding-left: 0;

@@ -19,3 +19,11 @@ $(".menu-close").click(function () {
 $("header nav a").click(function () {
     $("header nav>ul").removeClass("active");
 })
+
+$(document).click(function (event) {
+  var area = $(".qrcode");
+  if (!area.is(event.target) && area.has(event.target).length === 0) {
+    $(".qrcode_list").slideUp(300);
+    $(".qrcode_active").removeClass("dropdown");
+  }
+});
