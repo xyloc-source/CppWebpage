@@ -26,4 +26,10 @@ $(document).click(function (event) {
     $(".qrcode_list").slideUp(300);
     $(".qrcode_active").removeClass("dropdown");
   }
+
+  var langArea = $(".lang");
+  if (!langArea.is(event.target) && langArea.has(event.target).length === 0) {
+    $(".lang_list").slideUp(300);
+    $(".lang_active").removeClass("dropdown");
+  }
 });
