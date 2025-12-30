@@ -4,7 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- 設定為響應式網頁-->
+    <meta
+      name="description"
+      content="Cppcheck Premium - 專業的 C/C++ 靜態程式碼分析工具，提供進階檢查功能，支援 MISRA、AUTOSAR、CERT 等國際標準"
+    />
+    <meta
+      name="keywords"
+      content="Cppcheck, 靜態分析, C++, C, 程式碼檢查, MISRA, AUTOSAR, CERT, 靜態程式碼分析"
+    />
     <title>Cppcheck Premium</title>
+    <link rel="icon" type="image/png" href="./images/icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,6 +24,7 @@
   </head>
 
   <body>
+    <div id="header-placeholder"></div>
     <header>
       <h1><a href="./">Cppcheck Premium</a></h1>
       <nav>
@@ -34,72 +44,161 @@
               </svg>
             </button>
           </li>
-          <li><a href="#overview">概述</a></li>
-          <li><a href="#features-wrap">產品特點</a></li>
-          <li><a href="#industry">產業應用</a></li>
-          <li><a href="#standards-wrap">資安與標準支援</a></li>
-          <li><a href="#info">聯絡我們</a></li>
+          <li>
+            <a href="/#overview" data-i18n="header.overview">概述</a>
+          </li>
+          <li>
+            <a href="/#features-wrap" data-i18n="header.features">產品特點</a>
+          </li>
+          <li>
+            <a href="/#industry" data-i18n="header.industry">產業應用</a>
+          </li>
+          <li>
+            <a href="/#standards-wrap" data-i18n="header.standards"
+              >資安與標準支援</a
+            >
+          </li>
+          <li><a href="#info" data-i18n="header.contact">聯絡我們</a></li>
         </ul>
         <div class="header_btns">
-        <div class="lang">
-          <button class="lang_active header_btn">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="512"
-              height="512"
-              viewBox="0 0 32 32"
-              id="fi_3059430"
-            >
-              <g id="Layer_3" data-name="Layer 3">
-                <path
-                  d="M16,1A15,15,0,1,0,31,16,15.017,15.017,0,0,0,16,1Zm0,28c-2.065,0-4.227-2.662-5.3-7H21.3C20.227,26.338,18.065,29,16,29Zm-5.706-9a27.358,27.358,0,0,1,0-8H21.706A26.651,26.651,0,0,1,22,16a26.651,26.651,0,0,1-.294,4ZM3,16a12.94,12.94,0,0,1,.636-4h4.65a28.115,28.115,0,0,0,0,8H3.636A12.94,12.94,0,0,1,3,16ZM16,3c2.065,0,4.227,2.662,5.3,7H10.7C11.773,5.662,13.935,3,16,3Zm7.714,9h4.65a12.9,12.9,0,0,1,0,8h-4.65A28.351,28.351,0,0,0,24,16,28.351,28.351,0,0,0,23.714,12Zm3.807-2H23.354a16.766,16.766,0,0,0-2.567-6.075A13.063,13.063,0,0,1,27.521,10ZM11.213,3.925A16.766,16.766,0,0,0,8.646,10H4.479A13.063,13.063,0,0,1,11.213,3.925ZM4.479,22H8.646a16.766,16.766,0,0,0,2.567,6.075A13.063,13.063,0,0,1,4.479,22Zm16.308,6.075A16.766,16.766,0,0,0,23.354,22h4.167A13.063,13.063,0,0,1,20.787,28.075Z"
-                ></path>
-              </g>
-            </svg>
-          </button>
-          <ul class="lang_list">
-            <li><a href="" class="active">繁體中文</a></li>
-            <li><a href="">简体中文</a></li>
-            <li><a href="https://www.cppcheck.com/">English</a></li>
-          </ul>
-        </div>
-        <div class="qrcode">
-          <div class="qrcode_active header_btn">
-            <svg clip-rule="evenodd" fill-rule="evenodd" height="512" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 28 28" width="512" xmlns="http://www.w3.org/2000/svg" id="fi_8618309"><g transform="translate(-168 -84)"><g id="Icon"><g transform="matrix(.5 0 0 .5 110.525 89.5)"><path d="m141 3c0-1.105-.895-2-2-2h-10c-1.105 0-2 .895-2 2v10c0 1.105.895 2 2 2h10c1.105 0 2-.895 2-2zm-4 2v6h-6v-6z"></path></g><g transform="translate(1 1)"><path d="m176 85h-6c-.552 0-1 .448-1 1v6c0 .552.448 1 1 1s1-.448 1-1v-5h5c.552 0 1-.448 1-1s-.448-1-1-1z"></path></g><g transform="matrix(-1 0 0 1 363 1)"><path d="m176 87h-5v5c0 .552-.448 1-1 1s-1-.448-1-1v-6c0-.552.448-1 1-1h6c.552 0 1 .448 1 1s-.448 1-1 1z"></path></g><g transform="matrix(-1 0 0 -1 363 195)"><path d="m176 85h-6c-.552 0-1 .448-1 1v6c0 .552.448 1 1 1s1-.448 1-1v-5h5c.552 0 1-.448 1-1s-.448-1-1-1z"></path></g><g transform="matrix(1 0 0 -1 1 195)"><path d="m176 87h-5v5c0 .552-.448 1-1 1s-1-.448-1-1v-6c0-.552.448-1 1-1h6c.552 0 1 .448 1 1s-.448 1-1 1z"></path></g><g transform="matrix(.5 0 0 .5 119.492 89.5)"><path d="m141 3c0-1.105-.895-2-2-2h-10c-1.105 0-2 .895-2 2v10c0 1.105.895 2 2 2h10c1.105 0 2-.895 2-2zm-4 2v6h-6v-6z"></path></g><g transform="matrix(.5 0 0 .5 110.5 98.5)"><path d="m141 3c0-1.105-.895-2-2-2h-10c-1.105 0-2 .895-2 2v10c0 1.105.895 2 2 2h10c1.105 0 2-.895 2-2zm-4 2v6h-6v-6z"></path></g><g transform="matrix(.2 0 0 .2 158.2 99.4)"><path d="m129 3h10v10h-10z"></path></g><g transform="matrix(.2 0 0 .2 162.208 103.4)"><path d="m129 3h10v10h-10z"></path></g><g transform="matrix(.2 0 0 .2 160.2 101.4)"><path d="m129 3h10v10h-10z"></path></g><g transform="matrix(.2 0 0 .2 158.192 103.4)"><path d="m129 3h10v10h-10z"></path></g><g transform="matrix(.2 0 0 .2 162.2 99.4)"><path d="m129 3h10v10h-10z"></path></g></g></g></svg>
+          <div class="lang">
+            <button class="lang_active header_btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="512"
+                height="512"
+                viewBox="0 0 32 32"
+                id="fi_3059430"
+              >
+                <g id="Layer_3" data-name="Layer 3">
+                  <path
+                    d="M16,1A15,15,0,1,0,31,16,15.017,15.017,0,0,0,16,1Zm0,28c-2.065,0-4.227-2.662-5.3-7H21.3C20.227,26.338,18.065,29,16,29Zm-5.706-9a27.358,27.358,0,0,1,0-8H21.706A26.651,26.651,0,0,1,22,16a26.651,26.651,0,0,1-.294,4ZM3,16a12.94,12.94,0,0,1,.636-4h4.65a28.115,28.115,0,0,0,0,8H3.636A12.94,12.94,0,0,1,3,16ZM16,3c2.065,0,4.227,2.662,5.3,7H10.7C11.773,5.662,13.935,3,16,3Zm7.714,9h4.65a12.9,12.9,0,0,1,0,8h-4.65A28.351,28.351,0,0,0,24,16,28.351,28.351,0,0,0,23.714,12Zm3.807-2H23.354a16.766,16.766,0,0,0-2.567-6.075A13.063,13.063,0,0,1,27.521,10ZM11.213,3.925A16.766,16.766,0,0,0,8.646,10H4.479A13.063,13.063,0,0,1,11.213,3.925ZM4.479,22H8.646a16.766,16.766,0,0,0,2.567,6.075A13.063,13.063,0,0,1,4.479,22Zm16.308,6.075A16.766,16.766,0,0,0,23.354,22h4.167A13.063,13.063,0,0,1,20.787,28.075Z"
+                  ></path>
+                </g>
+              </svg>
+            </button>
+            <ul class="lang_list">
+              <li>
+                <a href="" data-i18n="header.lang.zh-TW" data-lang="zh-TW"
+                  >繁體中文</a
+                >
+              </li>
+              <li>
+                <a href="" data-i18n="header.lang.zh-CN" data-lang="zh-CN"
+                  >简体中文</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.cppcheck.com/"
+                  data-i18n="header.lang.en"
+                  data-lang="en"
+                  >English</a
+                >
+              </li>
+            </ul>
           </div>
-          <div class="qrcode_list">
-            <div class="qrcode_list_inner">
-              <div class="qrcode-item">
-                <img src="./images/wechat.png" alt="">
-                <p>Wechat</p>
-              </div>
-              <div class="qrcode-item">
-                <img src="./images/line.png" alt="">
-                <p>Line</p>
+          <div class="qrcode">
+            <button class="qrcode_active header_btn">
+              <svg
+                clip-rule="evenodd"
+                fill-rule="evenodd"
+                height="512"
+                stroke-linejoin="round"
+                stroke-miterlimit="2"
+                viewBox="0 0 28 28"
+                width="512"
+                xmlns="http://www.w3.org/2000/svg"
+                id="fi_8618309"
+              >
+                <g transform="translate(-168 -84)">
+                  <g id="Icon">
+                    <g transform="matrix(.5 0 0 .5 110.525 89.5)">
+                      <path
+                        d="m141 3c0-1.105-.895-2-2-2h-10c-1.105 0-2 .895-2 2v10c0 1.105.895 2 2 2h10c1.105 0 2-.895 2-2zm-4 2v6h-6v-6z"
+                      ></path>
+                    </g>
+                    <g transform="translate(1 1)">
+                      <path
+                        d="m176 85h-6c-.552 0-1 .448-1 1v6c0 .552.448 1 1 1s1-.448 1-1v-5h5c.552 0 1-.448 1-1s-.448-1-1-1z"
+                      ></path>
+                    </g>
+                    <g transform="matrix(-1 0 0 1 363 1)">
+                      <path
+                        d="m176 87h-5v5c0 .552-.448 1-1 1s-1-.448-1-1v-6c0-.552.448-1 1-1h6c.552 0 1 .448 1 1s-.448 1-1 1z"
+                      ></path>
+                    </g>
+                    <g transform="matrix(-1 0 0 -1 363 195)">
+                      <path
+                        d="m176 85h-6c-.552 0-1 .448-1 1v6c0 .552.448 1 1 1s1-.448 1-1v-5h5c.552 0 1-.448 1-1s-.448-1-1-1z"
+                      ></path>
+                    </g>
+                    <g transform="matrix(1 0 0 -1 1 195)">
+                      <path
+                        d="m176 87h-5v5c0 .552-.448 1-1 1s-1-.448-1-1v-6c0-.552.448-1 1-1h6c.552 0 1 .448 1 1s-.448 1-1 1z"
+                      ></path>
+                    </g>
+                    <g transform="matrix(.5 0 0 .5 119.492 89.5)">
+                      <path
+                        d="m141 3c0-1.105-.895-2-2-2h-10c-1.105 0-2 .895-2 2v10c0 1.105.895 2 2 2h10c1.105 0 2-.895 2-2zm-4 2v6h-6v-6z"
+                      ></path>
+                    </g>
+                    <g transform="matrix(.5 0 0 .5 110.5 98.5)">
+                      <path
+                        d="m141 3c0-1.105-.895-2-2-2h-10c-1.105 0-2 .895-2 2v10c0 1.105.895 2 2 2h10c1.105 0 2-.895 2-2zm-4 2v6h-6v-6z"
+                      ></path>
+                    </g>
+                    <g transform="matrix(.2 0 0 .2 158.2 99.4)">
+                      <path d="m129 3h10v10h-10z"></path>
+                    </g>
+                    <g transform="matrix(.2 0 0 .2 162.208 103.4)">
+                      <path d="m129 3h10v10h-10z"></path>
+                    </g>
+                    <g transform="matrix(.2 0 0 .2 160.2 101.4)">
+                      <path d="m129 3h10v10h-10z"></path>
+                    </g>
+                    <g transform="matrix(.2 0 0 .2 158.192 103.4)">
+                      <path d="m129 3h10v10h-10z"></path>
+                    </g>
+                    <g transform="matrix(.2 0 0 .2 162.2 99.4)">
+                      <path d="m129 3h10v10h-10z"></path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </button>
+            <div class="qrcode_list">
+              <div class="qrcode_list_inner">
+                <div class="qrcode-item">
+                  <img src="./images/wechat.png" alt="" />
+                  <p data-i18n="qrcode.wechat">Wechat</p>
+                </div>
+                <div class="qrcode-item">
+                  <img src="./images/line.png" alt="" />
+                  <p data-i18n="qrcode.line">Line</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <button class="menu header_btn">
-          <svg
-            height="384pt"
-            viewBox="0 -53 384 384"
-            width="384pt"
-            xmlns="http://www.w3.org/2000/svg"
-            id="fi_1828859"
-          >
-            <path
-              d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
-            ></path>
-            <path
-              d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
-            ></path>
-            <path
-              d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
-            ></path>
-          </svg>
-        </button>
-
+          <button class="menu header_btn">
+            <svg
+              height="384pt"
+              viewBox="0 -53 384 384"
+              width="384pt"
+              xmlns="http://www.w3.org/2000/svg"
+              id="fi_1828859"
+            >
+              <path
+                d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
+              ></path>
+              <path
+                d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
+              ></path>
+              <path
+                d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
+              ></path>
+            </svg>
+          </button>
         </div>
       </nav>
     </header>
@@ -109,22 +208,50 @@
       <section class="overview" id="overview">
         <div class="overview-text">
           <h2>Cppcheck</h2>
-          <p>
-            Cppcheck 於 2010 年起源自開源專案，歷經十餘年技術累積，於 2021 年正式邁向商業化，現已發展為全球廣受信賴的靜態程式碼分析解決方案。
+          <p data-i18n="overview.description">
+            Cppcheck 於 2010 年起源自開源專案，歷經十餘年技術累積，於 2021
+            年正式邁向商業化，現已發展為全球廣受信賴的靜態程式碼分析解決方案。
           </p>
           <ul>
             <li>
-              <strong>源自瑞典的專業工具</strong> <br />Cppcheck Premium 是一款由瑞典公司 Cppcheck Solutions AB 開發的靜態程式碼分析工具，專為 C/C++ 語言設計。
+              <strong data-i18n="overview.tool.title"
+                >源自瑞典的專業工具</strong
+              >
+              <br />
+              <span data-i18n="overview.tool.description"
+                >Cppcheck Premium 是一款由瑞典公司 Cppcheck Solutions AB
+                開發的靜態程式碼分析工具，專為 C/C++ 語言設計。</span
+              >
             </li>
             <li>
-              <strong>高階檢測，認證合規</strong> <br />旨在提供更進階的檢查 ，以利開發認證與符合產業標準規範。
+              <strong data-i18n="overview.verified.title"
+                >高階檢測，認證合規</strong
+              >
+              <br />
+              <span data-i18n="overview.verified.description"
+                >旨在提供更進階的檢查 ，以利開發認證與符合產業標準規範。</span
+              >
             </li>
             <li>
-              <strong>深獲開發者信賴</strong> <br />Cppcheck 在全球 C/C++ 開發社群中享有高度聲譽，其開源版本因高效能和精準的錯誤偵測能力而備受推崇，付費的 Premium 版本則進一步提供企業級功能與專業支援。
+              <strong data-i18n="overview.confidence.title"
+                >深獲開發者信賴</strong
+              >
+              <br />
+              <span data-i18n="overview.confidence.description"
+                >Cppcheck 在全球 C/C++
+                開發社群中享有高度聲譽，其開源版本因高效能和精準的錯誤偵測能力而備受推崇，付費的
+                Premium 版本則進一步提供企業級功能與專業支援。
+              </span>
             </li>
             <li>
-              <strong>提升程式碼品質與安全性</strong>
-              <br />透過深入分析原始碼，Cppcheck Premium 能自動識別潛在的錯誤、記憶體洩漏、緩衝區溢位、未定義行為和安全漏洞，顯著提升軟體品質並降低維護成本。
+              <strong data-i18n="overview.security.title"
+                >提升程式碼品質與安全性
+              </strong>
+              <br />
+              <span data-i18n="overview.security.description"
+                >透過深入分析原始碼，Cppcheck Premium
+                能自動識別潛在的錯誤、記憶體洩漏、緩衝區溢位、未定義行為和安全漏洞，顯著提升軟體品質並降低維護成本。
+              </span>
             </li>
           </ul>
         </div>
@@ -139,44 +266,61 @@
       <!-- 產品特點 -->
       <section class="features-wrap" id="features-wrap">
         <div class="features-title" id="features-title">
-          <p class="features-subtitle">強大的功能</p>
-          <h2>為什麼要使用Cppcheck？</h2>
-          <p>
-            Cppcheck 是 C/C++ 程式的靜態分析工具。它提供了獨特的程式分析來檢測錯誤，並在檢測未定義的行為和危險的編碼結構方面排名最高。
+          <p class="features-subtitle" data-i18n="features.title">強大的功能</p>
+          <h2 data-i18n="features.subtitle">為什麼要使用Cppcheck？</h2>
+          <p data-i18n="features.description">
+            Cppcheck 是 C/C++
+            程式的靜態分析工具。它提供了獨特的程式分析來檢測錯誤，並在檢測未定義的行為和危險的編碼結構方面排名最高。
           </p>
         </div>
         <div class="features">
           <div class="feature">
-            <h3>即時原碼分析</h3>
-            <p>編譯前即可偵測語法錯誤、效能瓶頸、資安風險，提升效率與品質。</p>
+            <h3 data-i18n="features.realtimeAnalysis.title">即時原碼分析</h3>
+            <p data-i18n="features.realtimeAnalysis.description">
+              編譯前即可偵測語法錯誤、效能瓶頸、資安風險，提升效率與品質。
+            </p>
           </div>
           <div class="feature">
-            <h3>無誤報率</h3>
-            <p>語意分析技術精準，協助團隊聚焦真實問題。</p>
+            <h3 data-i18n="features.zeroFalsePositive.title">無誤報率</h3>
+            <p data-i18n="features.zeroFalsePositive.description">
+              語意分析技術精準，協助團隊聚焦真實問題。
+            </p>
           </div>
           <div class="feature">
-            <h3>快速部署</h3>
-            <p>30 分鐘內即可啟用，無需 License Server，介面直覺。</p>
+            <h3 data-i18n="features.fastDeployment.title">快速部署</h3>
+            <p data-i18n="features.fastDeployment.description">
+              30 分鐘內即可啟用，無需 License Server，介面直覺。
+            </p>
           </div>
           <div class="feature">
-            <h3>輕量高效</h3>
-            <p>分析速度快，資源佔用低，命令列即可執行。</p>
+            <h3 data-i18n="features.lightweight.title">快速部署</h3>
+            <p data-i18n="features.lightweight.description">
+              30 分鐘內即可啟用，無需 License Server，介面直覺。
+            </p>
           </div>
           <div class="feature">
-            <h3>標準相容</h3>
-            <p>支援 MISRA、AUTOSAR、CERT、ISO 26262、IEC 62304 等。</p>
+            <h3 data-i18n="features.standardCompliance.title">標準相容</h3>
+            <p data-i18n="features.standardCompliance.description">
+              支援 MISRA、AUTOSAR、CERT、ISO 26262、IEC 62304 等。
+            </p>
           </div>
           <div class="feature">
-            <h3>支援離線執行</h3>
-            <p>可在 Air-gap 環境中全離線運行，符合高資安需求。</p>
+            <h3 data-i18n="features.offlineSupport.title">支援離線執行</h3>
+            <p data-i18n="features.offlineSupport.description">
+              可在 Air-gap 環境中全離線運行，符合高資安需求。
+            </p>
           </div>
           <div class="feature">
-            <h3>高整合性</h3>
-            <p>易於串接 CI/DevOps 自動化流程。</p>
+            <h3 data-i18n="features.integration.title">高整合性</h3>
+            <p data-i18n="features.integration.description">
+              易於串接 CI/DevOps 自動化流程。
+            </p>
           </div>
           <div class="feature">
-            <h3>彈性輸出格式</h3>
-            <p>支援 text/XML/json 等格式，便於後續整合及客製報告。</p>
+            <h3 data-i18n="features.flexibleOutput.title">彈性輸出格式</h3>
+            <p data-i18n="features.flexibleOutput.description">
+              支援 text/XML/json 等格式，便於後續整合及客製報告。
+            </p>
           </div>
         </div>
       </section>
@@ -184,29 +328,34 @@
       <!-- 適用產業 -->
       <section class="industry" id="industry">
         <div class="industry-text">
-          <h2>深受全世界行業的信任</h2>
+          <h2 data-i18n="industry.title">深受全世界行業的信任</h2>
           <p>
-            Cppcheck 受到全球各個行業工程師的信任，如<strong
-              >汽車、航天、醫療技術、國防、鐵路、消費電子、軟體開發、工業裝置、金融、電信等。</strong
-            ><br /><br />
-            Cppcheck 的社群每天都在成長。其程式庫託管於 Github，擁有
+            <span data-i18n="industry.subtitle"
+              >Cppcheck 受到全球各個行業工程師的信任，如<strong
+                >汽車、航天、醫療技術、國防、鐵路、消費電子、軟體開發、工業裝置、金融、電信等。</strong
+              ></span
+            >
+            <br /><br />
+            <span data-i18n="industry.description"
+              >Cppcheck 的社群每天都在成長。其程式庫託管於 Github，擁有</span
+            >
           </p>
           <div class="industry_info">
             <div class="industry_info_item">
               <h3>5000+</h3>
-              <p>顆星標</p>
+              <p data-i18n="industry.stars">顆星標</p>
             </div>
             <div class="industry_info_item">
               <h3>27000+</h3>
-              <p>次提交</p>
+              <p data-i18n="industry.commits">次提交</p>
             </div>
             <div class="industry_info_item">
               <h3>5000+</h3>
-              <p>已關閉Pull Request</p>
+              <p data-i18n="industry.pullRequests">已關閉 Pull Request</p>
             </div>
             <div class="industry_info_item">
               <h3>300+</h3>
-              <p>活躍貢獻者</p>
+              <p data-i18n="industry.contributors">活躍貢獻者</p>
             </div>
           </div>
         </div>
@@ -218,56 +367,90 @@
       <!-- 安全標準與合規 -->
       <section class="standards-wrap" id="standards-wrap">
         <div class="standards-title" id="standards-title">
-          <h2>助力企業提升品質與安全</h2>
+          <h2 data-i18n="standards.title">助力企業提升品質與安全</h2>
           <p>
-            Cppcheck 提供專業 TÜV 認證的C/C++ 靜態程式碼分析工具，全面支援國際編碼規範與合規要求，並通過多項工具認證。<br>透過即時檢測與完整報告，協助企業強化程式碼品質，確保產品安全與可靠，滿足關鍵產業的嚴格標準。
+            <span data-i18n="standards.description.intro"
+              >Cppcheck 提供專業 TÜV 認證的C/C++
+              靜態程式碼分析工具，全面支援國際編碼規範與合規要求，並通過多項工具認證。</span
+            ><br />
+            <span data-i18n="standards.description.value"
+              >透過即時檢測與完整報告，協助企業強化程式碼品質，確保產品安全與可靠，滿足關鍵產業的嚴格標準。</span
+            >
           </p>
         </div>
         <div class="standards" id="standards">
           <div class="standard">
-            <h3>功能安全</h3>
-            <p>
+            <h3 data-i18n="standards.functionalSafety.title">功能安全</h3>
+            <p data-i18n="standards.functionalSafety.description">
               支援多項國際功能安全標準，涵蓋醫療、汽車、鐵路及一般安全系統，協助企業落實高安全等級的軟體開發。
             </p>
             <ul>
-              <li>IEC 62304（醫療器械軟體）</li>
-              <li>IEC 61508（一般安全相關系統）</li>
-              <li>ISO 26262（汽車功能安全）</li>
-              <li>EN 50128（鐵路軟體安全）</li>
+              <li data-i18n="standards.functionalSafety.items.iec62304">
+                IEC 62304（醫療器械軟體）
+              </li>
+              <li data-i18n="standards.functionalSafety.items.iec61508">
+                IEC 61508（一般安全相關系統）
+              </li>
+              <li data-i18n="standards.functionalSafety.items.iso26262">
+                ISO 26262（汽車功能安全）
+              </li>
+              <li data-i18n="standards.functionalSafety.items.en50128">
+                EN 50128（鐵路軟體安全）
+              </li>
             </ul>
           </div>
           <div class="standard">
-            <h3>汽車軟體編碼規範</h3>
-            <p>
+            <h3 data-i18n="standards.automotiveCoding.title">
+              汽車軟體編碼規範
+            </h3>
+            <p data-i18n="standards.automotiveCoding.description">
               完整支援主流車用軟體編碼規範，確保車控系統在開發階段即可降低資安與潛在風險。
             </p>
             <ul>
-              <li>MISRA C 2023</li>
-              <li>MISRA C++ 2008</li>
-              <li>MISRA C++ 2023</li>
-              <li>Autosar C++ 14</li>
+              <li data-i18n="standards.automotiveCoding.items.misraC2023">
+                MISRA C 2023
+              </li>
+              <li data-i18n="standards.automotiveCoding.items.misraCpp2008">
+                MISRA C++ 2008
+              </li>
+              <li data-i18n="standards.automotiveCoding.items.misraCpp2023">
+                MISRA C++ 2023
+              </li>
+              <li data-i18n="standards.automotiveCoding.items.autosarCpp14">
+                Autosar C++ 14
+              </li>
             </ul>
           </div>
           <div class="standard">
-            <h3>網路安全</h3>
-            <p>
+            <h3 data-i18n="standards.cyberSecurity.title">網路安全</h3>
+            <p data-i18n="standards.cyberSecurity.description">
               提供國際公認的網路安全檢測規範，協助開發團隊加強程式碼追溯性並控管風險。
             </p>
             <ul>
-              <li>CWE 前25項</li>
-              <li>CERT C 2016</li>
-              <li>CERT C++ 2016</li>
-              <li>ISO/IEC TS 17961: 2013/Cor 1: 2016</li>
+              <li data-i18n="standards.cyberSecurity.items.cweTop25">
+                CWE 前25項
+              </li>
+              <li data-i18n="standards.cyberSecurity.items.certC2016">
+                CERT C 2016
+              </li>
+              <li data-i18n="standards.cyberSecurity.items.certCpp2016">
+                CERT C++ 2016
+              </li>
+              <li data-i18n="standards.cyberSecurity.items.iso17961">
+                ISO/IEC TS 17961: 2013/Cor 1: 2016
+              </li>
             </ul>
           </div>
           <div class="standard">
-            <h3>合規與認證</h3>
-            <p>
-               Cppcheck 榮獲TÜV認證，適用於交通控制、導航與車聯網環境，協助開發者更高效地滿足產業安全與合規要求，確保系統可靠運行。
+            <h3 data-i18n="standards.compliance.title">合規與認證</h3>
+            <p data-i18n="standards.compliance.description">
+              Cppcheck
+              榮獲TÜV認證，適用於交通控制、導航與車聯網環境，協助開發者更高效地滿足產業安全與合規要求，確保系統可靠運行。
             </p>
             <ul>
-              <li>
-                TÜV SÜD 認證（符合IEC 61508 、ISO 26262與EN50128、EN50657、EN50716 的第三方安全認證）
+              <li data-i18n="standards.compliance.items.tuv">
+                TÜV SÜD 認證（符合IEC 61508 、ISO
+                26262與EN50128、EN50657、EN50716 的第三方安全認證）
               </li>
             </ul>
           </div>
@@ -277,48 +460,59 @@
       <!-- 安聯繫我們 -->
       <section class="info-section-container" , id="info">
         <div class="info-top">
-        <div class="top-logo">
-          <img src="images/CppLogo.jpeg" alt="公司 Logo" class="logo-img" />
-        </div>
-        <div class="info-links">
-          <a class="info-link" href="https://cppcheck.sourceforge.io/">開源版連結 </a>
-          <a class="info-link" href="https://app-eu1.hubspotdocuments.com/documents/25267601/view/883134571?accessId=625c0a&hsLang=en">使用者授權協議下載 </a>
-          <a href="service-page.html" class="service-button">聯絡我們</a>
-        </div>
-            
-
+          <div class="top-logo">
+            <img src="images/CppLogo.jpeg" alt="公司 Logo" class="logo-img" />
+          </div>
+          <div class="info-links">
+            <a class="info-link" href="https://cppcheck.sourceforge.io/"
+              >開源版連結
+            </a>
+            <a
+              class="info-link"
+              href="https://app-eu1.hubspotdocuments.com/documents/25267601/view/883134571?accessId=625c0a&hsLang=en"
+              >使用者授權協議下載
+            </a>
+            <a href="service-page.html" class="service-button">聯絡我們</a>
+          </div>
         </div>
 
         <div class="info-blocks-wrapper">
           <div class="info-block left-block">
-            <h3>中華區獨家代理</h3>
+            <h3 data-i18n="contact.agent.title">中華區獨家代理</h3>
             <p class="company-name">
               <a
                 href="https://www.watsonbell.com"
                 target="_blank"
                 class="company-link"
+                data-i18n="contact.agent.company"
               >
                 逸松股份有限公司
               </a>
             </p>
-            <p class="address">235603 新北市中和區連城路268號13樓之4</p>
+            <p class="address" data-i18n="contact.agent.address">
+              235603 新北市中和區連城路268號13樓之4
+            </p>
           </div>
 
           <div class="info-block middle-block">
-            <h3>電話 | 電子郵件</h3>
-            <p class="phone-number">電話：+886-(2)-8227-8050</p>
-            <p class="email-address">E-mail：service@watsonbell.com</p>
+            <h3 data-i18n="contact.contactInfo.title">電話 | 電子郵件</h3>
+            <p class="phone-number" data-i18n="contact.contactInfo.phoneNumber">
+              電話：+886-(2)-8227-8050
+            </p>
+            <p class="email-address" data-i18n="contact.contactInfo.email">
+              E-mail：service@watsonbell.com
+            </p>
           </div>
 
           <div class="info-block right-block">
             <div class="info-qrcode">
               <div class="qrcode-item">
-                <img src="./images/wechat.png" alt="">
-                <p>Wechat</p>
+                <img src="./images/wechat.png" alt="" />
+                <p data-i18n="qrcode.wechat">Wechat</p>
               </div>
               <div class="qrcode-item">
-                <img src="./images/line.png" alt="">
-                <p>Line</p>
+                <img src="./images/line.png" alt="" />
+                <p data-i18n="qrcode.line">Line</p>
               </div>
             </div>
           </div>
@@ -327,10 +521,19 @@
     </main>
 
     <footer>
-      <p>版權所有 copyright © 2025 watsonbell.com Inc. All Rights Reserved.</p>
+      <p data-i18n="footer.copyRight">
+        版權所有 copyright © 2025 watsonbell.com Inc. All Rights Reserved.
+      </p>
     </footer>
 
+    <!-- 外部庫：i18next 國際化 -->
+    <script src="https://unpkg.com/i18next@23.12.2/dist/umd/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-http-backend@3.0.2/i18nextHttpBackend.min.js"></script>
+
+    <!-- 核心腳本：載入順序很重要 -->
     <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/i18n.js"></script>
+    <script src="./js/header.js"></script>
     <script src="./js/common.js"></script>
   </body>
 </html>

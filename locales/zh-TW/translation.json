@@ -1,0 +1,219 @@
+{
+  "header": {
+    "overview": "概述",
+    "features": "產品特點",
+    "industry": "產業應用",
+    "standards": "資安與標準支援",
+    "contact": "聯絡我們",
+    "lang": {
+      "zh-TW": "繁體中文",
+      "zh-CN": "简体中文",
+      "en": "English"
+    }
+  },
+  "qrcode": {
+    "line": "Line",
+    "wechat": "Wechat"
+  },
+  "overview": {
+    "description": "Cppcheck 於 2010 年起源自開源專案，歷經十餘年技術累積，於 2021 年正式邁向商業化，現已發展為全球廣受信賴的靜態程式碼分析解決方案。",
+    "tool": {
+      "title": "源自瑞典的專業工具",
+      "description": "Cppcheck Premium 是一款由瑞典公司 Cppcheck Solutions AB 開發的靜態程式碼分析工具，專為 C/C++ 語言設計。"
+    },
+    "verified": {
+      "title": "高階檢測，認證合規",
+      "description": "旨在提供更進階的檢查，以利開發認證與符合產業標準規範。"
+    },
+    "confidence": {
+      "title": "深獲開發者信賴",
+      "description": "Cppcheck 在全球 C/C++ 開發社群中享有高度聲譽，其開源版本因高效能和精準的錯誤偵測能力而備受推崇，付費的 Premium 版本則進一步提供企業級功能與專業支援。"
+    },
+    "security": {
+      "title": "提升程式碼品質與安全性",
+      "description": "透過深入分析原始碼，Cppcheck Premium 能自動識別潛在的錯誤、記憶體洩漏、緩衝區溢位、未定義行為和安全漏洞，顯著提升軟體品質並降低維護成本。"
+    }
+  },
+  "features": {
+    "title": "強大的功能",
+    "subtitle": "為什麼要使用Cppcheck？",
+    "description": "Cppcheck 是 C/C++ 程式的靜態分析工具。它提供了獨特的程式分析來檢測錯誤，並在檢測未定義的行為和危險的編碼結構方面排名最高。",
+    "realtimeAnalysis": {
+      "title": "即時原碼分析",
+      "description": "編譯前即可偵測語法錯誤、效能瓶頸、資安風險，提升效率與品質。"
+    },
+    "zeroFalsePositive": {
+      "title": "無誤報率",
+      "description": "語意分析技術精準，協助團隊聚焦真實問題。"
+    },
+    "fastDeployment": {
+      "title": "快速部署",
+      "description": "30 分鐘內即可啟用，無需 License Server，介面直覺。"
+    },
+    "lightweight": {
+      "title": "輕量高效",
+      "description": "分析速度快，資源佔用低，命令列即可執行。"
+    },
+    "standardCompliance": {
+      "title": "標準相容",
+      "description": "支援 MISRA、AUTOSAR、CERT、ISO 26262、IEC 62304 等。"
+    },
+    "offlineSupport": {
+      "title": "支援離線執行",
+      "description": "可在 Air-gap 環境中全離線運行，符合高資安需求。"
+    },
+    "integration": {
+      "title": "高整合性",
+      "description": "易於串接 CI/DevOps 自動化流程。"
+    },
+    "flexibleOutput": {
+      "title": "彈性輸出格式",
+      "description": "支援 text/XML/json 等格式，便於後續整合及客製報告。"
+    }
+  },
+  "industry": {
+    "title": "深受全世界行業的信任",
+    "subtitle": "Cppcheck 受到全球各個行業工程師的信任，如<strong>汽車、航天、醫療技術、國防、鐵路、消費電子、軟體開發、工業裝置、金融、電信等。</strong>",
+    "description": "Cppcheck 的社群每天都在成長。其程式庫託管於 Github，擁有",
+    "stars": "顆星標",
+    "commits": "次提交",
+    "pullRequests": "已關閉Pull Request",
+    "contributors": "活躍貢獻者"
+  },
+  "standards": {
+    "title": "助力企業提升品質與安全",
+    "description": {
+      "intro": "Cppcheck 提供專業 TÜV 認證的C/C++ 靜態程式碼分析工具，全面支援國際編碼規範與合規要求，並通過多項工具認證。",
+      "value": "透過即時檢測與完整報告，協助企業強化程式碼品質，確保產品安全與可靠，滿足關鍵產業的嚴格標準。"
+    },
+    "functionalSafety": {
+      "title": "功能安全",
+      "description": "支援多項國際功能安全標準，涵蓋醫療、汽車、鐵路及一般安全系統，協助企業落實高安全等級的軟體開發。",
+      "items": {
+        "iec62304": "IEC 62304（醫療器械軟體）",
+        "iec61508": "IEC 61508（一般安全相關系統）",
+        "iso26262": "ISO 26262（汽車功能安全）",
+        "en50128": "EN 50128（鐵路軟體安全）"
+      }
+    },
+    "automotiveCoding": {
+      "title": "汽車軟體編碼規範",
+      "description": "完整支援主流車用軟體編碼規範，確保車控系統在開發階段即可降低資安與潛在風險。",
+      "items": {
+        "misraC2023": "MISRA C 2023",
+        "misraCpp2008": "MISRA C++ 2008",
+        "misraCpp2023": "MISRA C++ 2023",
+        "autosarCpp14": "Autosar C++ 14"
+      }
+    },
+    "cyberSecurity": {
+      "title": "網路安全",
+      "description": "提供國際公認的網路安全檢測規範，協助開發團隊加強程式碼追溯性並控管風險。",
+      "items": {
+        "cweTop25": "CWE 前25項",
+        "certC2016": "CERT C 2016",
+        "certCpp2016": "CERT C++ 2016",
+        "iso17961": "ISO/IEC TS 17961: 2013/Cor 1: 2016"
+      }
+    },
+    "compliance": {
+      "title": "合規與認證",
+      "description": "Cppcheck 榮獲TÜV認證，適用於交通控制、導航與車聯網環境，協助開發者更高效地滿足產業安全與合規要求，確保系統可靠運行。",
+      "items": {
+        "tuv": "TÜV SÜD 認證（符合IEC 61508 、ISO 26262與EN50128、EN50657、EN50716 的第三方安全認證）"
+      }
+    }
+  },
+  "contact": {
+    "agent": {
+      "title": "中華區獨家代理",
+      "company": "逸松股份有限公司",
+      "address": "235603 新北市中和區連城路268號13樓之4"
+    },
+    "contactInfo": {
+      "title": "電話 | 電子郵件",
+      "phoneNumber": "電話：+886-(2)-8227-8050",
+      "email": "E-mail：service@watsonbell.com"
+    },
+    "description": "如果您對 Cppcheck Premium 有任何問題，請透過以下表格與我們聯絡，我們會盡快回覆您！",
+    "name": "姓名<span class='required'>*</span>",
+    "email": "電子郵件<span class='required'>*</span>",
+    "companyName": "公司名稱<span class='required'>*</span>",
+    "form": {
+      "industry": {
+        "label": "產業別<span class='required'>*</span>",
+        "option": {
+          "automotive": "汽車",
+          "aerospace": "航天",
+          "medical": "醫療技術",
+          "defense": "國防",
+          "railway": "鐵路",
+          "consumer": "消費電子",
+          "software": "軟體開發",
+          "industrial": "工業裝置",
+          "finance": "金融",
+          "telecom": "電信",
+          "other": "其他"
+        }
+      },
+      "phone": {
+        "label": "聯絡電話",
+        "option": {
+          "mobile": "手機",
+          "office": "公司電話"
+        }
+      },
+      "chat": {
+        "label": "通訊軟體帳號<span class='required'>*</span>",
+        "option": {
+          "wechat": "Wechat",
+          "line": "Line",
+          "other": "其他"
+        }
+      },
+      "subject": {
+        "label": "詢問主題<span class='required'>*</span>",
+        "placeholder": "請選擇",
+        "group": {
+          "customer": "客服相關",
+          "support": "技術支援",
+          "other": "其它"
+        },
+        "option": {
+          "talkSales": "與銷售人員交談",
+          "productDoc": "產品介紹文件",
+          "freeTrial": "免費試用Cppcheck",
+          "pricing": "價格與授權詢問",
+          "billing": "帳單和付款資訊",
+          "installation": "軟體安裝與設定",
+          "techSupport": "技術支援要求",
+          "analysisIssue": "分析結果與誤報問題",
+          "other": "其它問題"
+        }
+      },
+      "question": {
+        "label": "我們能幫您什麼？"
+      },
+      "disclaimer": "您提供給我們的聯絡資訊，將作為我們提供產品與服務資訊之聯繫用途。當您提交訊息時，即表示您同意上述使用範圍。",
+      "qrcode": {
+        "wechat": "Wechat",
+        "line": "Line"
+      },
+      "submit": "提交",
+      "requiredMessage": "請填寫這個欄位。",
+      "success": "您的訊息已成功送出！",
+      "error": {
+        "400": "錯誤 400：請求格式有誤，請檢查您填寫的內容。",
+        "401": "錯誤 401：您沒有權限送出，請確認登入狀態。",
+        "403": "錯誤 403：禁止存取，您的請求被拒絕。",
+        "404": "錯誤 404：伺服器找不到資源，請稍後再試。",
+        "500": "錯誤 500：伺服器發生錯誤，請稍後再試。",
+        "503": "錯誤 503：伺服器暫時無法使用，請稍後再試。",
+        "default": "發生未知錯誤，請稍後再試。"
+      }
+    }
+  },
+  "footer": {
+    "copyRight": "版權所有 copyright © 2025 watsonbell.com Inc. All Rights Reserved."
+  }
+}
