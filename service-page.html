@@ -35,26 +35,31 @@
           有任何問題，請透過以下表格與我們聯絡，我們會盡快回覆您！
         </p>
 
-        <form action="javascript: GoogleForm()" id="contactForm">
+        <form
+          id="contactForm"
+          target="hidden_iframe"
+          method="POST"
+          action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScrQDtYCxtWJhlYHlxHBySZrZPuhKm4eDYYGeMYHRR8rG5s0Q/formResponse"
+        >
           <div class="form-row">
             <label for="name" data-i18n="contact.name"
               >姓名<span class="required">*</span></label
             >
-            <input type="text" id="name" name="Name" required />
+            <input type="text" id="name" name="entry.41073338" required />
           </div>
 
           <div class="form-row">
             <label for="email" data-i18n="contact.email"
               >電子郵件<span class="required">*</span></label
             >
-            <input type="email" id="email" name="Email" required />
+            <input type="email" id="email" name="entry.1138436996" required />
           </div>
 
           <div class="form-row">
             <label for="company" data-i18n="contact.companyName"
               >公司名稱<span class="required">*</span></label
             >
-            <input type="text" id="company" name="Company" required />
+            <input type="text" id="company" name="entry.395248319" required />
           </div>
 
           <div class="form-row">
@@ -128,7 +133,7 @@
                   公司電話
                 </option>
               </select>
-              <input type="text" id="phone" name="Phone" />
+              <input type="text" id="phone" name="entry.2054497579" />
             </div>
           </div>
 
@@ -156,7 +161,7 @@
                 </option>
               </select>
 
-              <input type="text" id="media" name="media" readonly />
+              <input type="text" id="media" name="media" />
             </div>
           </div>
 
@@ -165,7 +170,7 @@
               詢問主題<span class="required">*</span>
             </label>
 
-            <select id="subject" name="Subject" required>
+            <select id="subject" name="entry.531304670" required>
               <option
                 value=""
                 disabled
@@ -249,7 +254,7 @@
             <label for="question" data-i18n="contact.form.question.label">
               我們能幫您什麼？
             </label>
-            <textarea id="question" name="Question" rows="5"></textarea>
+            <textarea id="question" name="entry.1582170040" rows="5"></textarea>
           </div>
 
           <p class="disclaimer" data-i18n="contact.form.disclaimer">
@@ -278,72 +283,73 @@
             </div>
           </div>
         </form>
+
+        <iframe
+          name="hidden_iframe"
+          id="hidden_iframe"
+          style="display: none"
+        ></iframe>
       </main>
     </div>
-    <!-- 外部庫：i18next 國際化 -->
+    <!-- JavaScript -->
     <script src="https://unpkg.com/i18next@23.12.2/dist/umd/i18next.min.js"></script>
     <script src="https://unpkg.com/i18next-http-backend@3.0.2/i18nextHttpBackend.min.js"></script>
-
-    <!-- 核心腳本：載入順序很重要 -->
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/i18n.js"></script>
     <script src="./js/header.js"></script>
     <script src="./js/common.js"></script>
     <script>
-      function GoogleForm() {
-        // 宣告欄位
-        var field1 = $("[name='Name']").val();
-        var field2 = $("[name='Email']").val();
-        var field3 = $("[name='Company']").val();
-        var field4 = $("[name='Phone']").val();
-        var field5 = $("[name='Subject']").val();
-        var field6 = $("[name='Question']").val();
-        $.ajax({
-          url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLScrQDtYCxtWJhlYHlxHBySZrZPuhKm4eDYYGeMYHRR8rG5s0Q/formResponse", // Google Form「原始碼」標籤裡面的form action網址
-          data: {
-            // Google Form「元件」標籤裡面搜尋"entry"
-            "entry.41073338": field1,
-            "entry.1138436996": field2,
-            "entry.395248319": field3,
-            "entry.2054497579": field4,
-            "entry.531304670": field5,
-            "entry.1582170040": field6,
-          },
-          type: "Post",
-          dataType: "xml",
-          statusCode: {
-            0: function () {
-              alert(i18next.t("contact.form.success"));
-              document.getElementById("contactForm").reset(); // 清除表格內容
-            },
-            200: function () {
-              alert(i18next.t("contact.form.success"));
-              document.getElementById("contactForm").reset(); // 清除表格內容
-            },
-            400: function () {
-              alert(i18next.t("contact.form.error.400"));
-            },
-            401: function () {
-              alert(i18next.t("contact.form.error.401"));
-            },
-            403: function () {
-              alert(i18next.t("contact.form.error.403"));
-            },
-            404: function () {
-              alert(i18next.t("contact.form.error.404"));
-            },
-            500: function () {
-              alert(i18next.t("contact.form.error.500"));
-            },
-            503: function () {
-              alert(i18next.t("contact.form.error.503"));
-            },
-            default: function () {
-              alert(i18next.t("contact.form.error.default"));
-            },
-          },
+      $(document).ready(function () {
+        var formSubmitted = false;
+        var submitButton = $("#contactForm").find('button[type="submit"]');
+        var originalText = submitButton.text() || submitButton.html();
+
+        $("#hidden_iframe").on("load", function () {
+          if (formSubmitted) {
+            setTimeout(function () {
+              showSuccessMessage();
+              submitButton.prop("disabled", false);
+              if (originalText) {
+                submitButton.text(originalText);
+              }
+              formSubmitted = false;
+            }, 1000);
+          }
         });
-      }
+
+        $("#contactForm").on("submit", function (e) {
+          if (formSubmitted) {
+            e.preventDefault();
+            return false;
+          }
+
+          formSubmitted = true;
+
+          submitButton.prop("disabled", true);
+          submitButton.text("提交中...");
+
+          setTimeout(function () {
+            if (formSubmitted) {
+              showSuccessMessage();
+              submitButton.prop("disabled", false);
+              if (originalText) {
+                submitButton.text(originalText);
+              }
+              formSubmitted = false;
+            }
+          }, 3000);
+        });
+
+        function showSuccessMessage() {
+          var message =
+            typeof i18next !== "undefined" && i18next.isInitialized
+              ? i18next.t("contact.form.success")
+              : "表單已成功提交！";
+
+          alert(message);
+          document.getElementById("contactForm").reset();
+        }
+      });
     </script>
   </body>
 </html>
