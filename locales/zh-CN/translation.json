@@ -16,10 +16,10 @@
     "wechat": "Wechat"
   },
   "overview": {
-    "description": "Cppcheck 于 2010 年起源自开源专案，历经十馀年技术累积，于 2021 年正式迈向商业化，现已发展为全球广受信赖的静态程式码分析解决方案。",
+    "description": "Cppcheck 于 2010 年起源自开源专案，历经十余年技术累积，于 2021 年正式迈向商业化，现已发展为全球广受信赖的静态程序码分析解决方案。",
     "tool": {
       "title": "源自瑞典的专业工具",
-      "description": "Cppcheck Premium 是一款由瑞典公司 Cppcheck Solutions AB 开发的静态程式码分析工具，专为 C/C++ 语言设计。"
+      "description": "Cppcheck Premium 是一款由瑞典公司 Cppcheck Solutions AB 开发的静态程序码分析工具，专为 C/C++ 语言设计。"
     },
     "verified": {
       "title": "高阶检测，认证合规",
@@ -30,14 +30,14 @@
       "description": "Cppcheck 在全球 C/C++ 开发社群中享有高度声誉，其开源版本因高效能和精准的错误侦测能力而备受推崇，付费的 Premium 版本则进一步提供企业级功能与专业支援。"
     },
     "security": {
-      "title": "提升程式码品质与安全性",
-      "description": "透过深入分析原始码，Cppcheck Premium 能自动识别潜在的错误、记忆体洩漏、缓冲区溢位、未定义行为和安全漏洞，显着提升软体品质并降低维护成本。"
+      "title": "提升程序码品质与安全性",
+      "description": "透过深入分析原始码，Cppcheck Premium 能自动识别潜在的错误、记忆体泄漏、缓冲区溢位、未定义行为和安全漏洞，显著提升软体品质并降低维护成本。"
     }
   },
   "features": {
     "title": "强大的功能",
-    "subtitle": "为什麽要使用Cppcheck？",
-    "description": "Cppcheck 是 C/C++ 程式的静态分析工具。它提供了独特的程式分析来检测错误，并在检测未定义的行为和危险的编码结构方面排名最高。",
+    "subtitle": "为什么要使用Cppcheck？",
+    "description": "Cppcheck 是 C/C++ 程序的静态分析工具。它提供了独特的程序分析来检测错误，并在检测未定义的行为和危险的编码结构方面排名最高。",
     "realtimeAnalysis": {
       "title": "即时原码分析",
       "description": "编译前即可侦测语法错误、效能瓶颈、资安风险，提升效率与品质。"
@@ -52,7 +52,7 @@
     },
     "lightweight": {
       "title": "轻量高效",
-      "description": "分析速度快，资源佔用低，命令列即可执行。"
+      "description": "分析速度快，资源占用低，命令列即可执行。"
     },
     "standardCompliance": {
       "title": "标准相容",
@@ -68,13 +68,13 @@
     },
     "flexibleOutput": {
       "title": "弹性输出格式",
-      "description": "支援 text/XML/json 等格式，便于后续整合及客製报告。"
+      "description": "支援 text/XML/json 等格式，便于后续整合及客制报告。"
     }
   },
   "industry": {
     "title": "深受全世界行业的信任",
     "subtitle": "Cppcheck 受到全球各个行业工程师的信任，如<strong>汽车、航天、医疗技术、国防、铁路、消费电子、软体开发、工业装置、金融、电信等。</strong>",
-    "description": "Cppcheck 的社群每天都在成长。其程式库託管于 Github，拥有",
+    "description": "Cppcheck 的社群每天都在成长。其程序库托管于 Github，拥有",
     "stars": "颗星标",
     "commits": "次提交",
     "pullRequests": "已关闭Pull Request",
@@ -83,8 +83,8 @@
   "standards": {
     "title": "助力企业提升品质与安全",
     "description": {
-      "intro": "Cppcheck 提供专业 TÜV 认证的C/C++ 静态程式码分析工具，全面支援国际编码规范与合规要求，并通过多项工具认证。",
-      "value": "透过即时检测与完整报告，协助企业强化程式码品质，确保产品安全与可靠，满足关键产业的严格标准。"
+      "intro": "Cppcheck 提供专业 TÜV 认证的C/C++ 静态程序码分析工具，全面支援国际编码规范与合规要求，并通过多项工具认证。",
+      "value": "透过即时检测与完整报告，协助企业强化程序码品质，确保产品安全与可靠，满足关键产业的严格标准。"
     },
     "functionalSafety": {
       "title": "功能安全",
@@ -107,8 +107,8 @@
       }
     },
     "cyberSecurity": {
-      "title": "网路安全",
-      "description": "提供国际公认的网路安全检测规范，协助开发团队加强程式码追溯性并控管风险。",
+      "title": "网络安全",
+      "description": "提供国际公认的网络安全检测规范，协助开发团队加强程序码追溯性并控管风险。",
       "items": {
         "cweTop25": "CWE 前25项",
         "certC2016": "CERT C 2016",
@@ -189,7 +189,7 @@
           "productDoc": "产品介绍文件",
           "freeTrial": "免费试用Cppcheck",
           "pricing": "价格与授权询问",
-          "billing": "帐单和付款资讯",
+          "billing": "账单和付款资讯",
           "installation": "软体安装与设定",
           "techSupport": "技术支援要求",
           "analysisIssue": "分析结果与误报问题",
@@ -197,23 +197,23 @@
         }
       },
       "question": {
-        "label": "我们能帮您什麽？"
+        "label": "我们能帮您什么？"
       },
-      "disclaimer": "您提供给我们的联络资讯，将作为我们提供产品与服务资讯之联繫用途。当您提交讯息时，即表示您同意上述使用范围。",
+      "disclaimer": "您提供给我们的联络资讯，将作为我们提供产品与服务资讯之联系用途。当您提交讯息时，即表示您同意上述使用范围。",
       "qrcode": {
         "wechat": "Wechat",
         "line": "Line"
       },
       "submit": "提交",
       "requiredMessage": "请填写这个栏位。",
-      "success": "您的讯息已成功送出！",
+      "success": "您的信息已成功送出！",
       "error": {
         "400": "错误 400：请求格式有误，请检查您填写的内容。",
         "401": "错误 401：您没有权限送出，请确认登入状态。",
         "403": "错误 403：禁止存取，您的请求被拒绝。",
-        "404": "错误 404：伺服器找不到资源，请稍后再试。",
-        "500": "错误 500：伺服器发生错误，请稍后再试。",
-        "503": "错误 503：伺服器暂时无法使用，请稍后再试。",
+        "404": "错误 404：服务器找不到资源，请稍后再试。",
+        "500": "错误 500：服务器发生错误，请稍后再试。",
+        "503": "错误 503：服务器暂时无法使用，请稍后再试。",
         "default": "发生未知错误，请稍后再试。"
       }
     }
