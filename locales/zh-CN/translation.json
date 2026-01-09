@@ -23,7 +23,7 @@
     },
     "verified": {
       "title": "高阶检测，认证合规",
-      "description": "旨在提供更进阶的检查，以利开发认证与符合产业标准规范。"
+      "description": "提供更进阶的检查，以利开发认证与符合产业标准规范。"
     },
     "confidence": {
       "title": "深获开发者信赖",
@@ -77,7 +77,7 @@
     "description": "Cppcheck 的社群每天都在成长。其程序库托管于 Github，拥有",
     "stars": "颗星标",
     "commits": "次提交",
-    "pullRequests": "已关闭Pull Request",
+    "pullRequests": "已合併的Pull Request",
     "contributors": "活跃贡献者"
   },
   "standards": {
@@ -131,7 +131,7 @@
       "service": "联络我们"
     },
     "agent": {
-      "title": "中华区独家代理",
+      "title": "大中华区独家代理",
       "company": "逸松股份有限公司",
       "address": "235603 新北市中和区连城路268号13楼之4"
     },
@@ -146,11 +146,11 @@
     "companyName": "公司名称<span class='required'>*</span>",
     "form": {
       "industry": {
-        "label": "产业别<span class='required'>*</span>",
+        "label": "产业类别<span class='required'>*</span>",
         "option": {
           "automotive": "汽车",
           "aerospace": "航天",
-          "medical": "医疗技术",
+          "medical": "医疗器械",
           "defense": "国防",
           "railway": "铁路",
           "consumer": "消费电子",
@@ -171,7 +171,7 @@
       "chat": {
         "label": "通讯软体帐号<span class='required'>*</span>",
         "option": {
-          "wechat": "Wechat",
+          "wechat": "微信",
           "line": "Line",
           "other": "其他"
         }

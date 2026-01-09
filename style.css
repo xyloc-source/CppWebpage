@@ -1,6 +1,6 @@
 :root {
     --primary-color: #F88836;
-    --gray: #7A7A7A;
+    --gray: #5d5d5d;
     --primary-transition: 0.3s;
 }
 
@@ -18,7 +18,7 @@ html {
 
 /* 共用樣式：所有頁面都繼承 */
 body {
-    font-family: "Barlow Condensed", "noto sans TC", "Microsoft YaHei", "微软雅黑", sans-serif;
+    font-family: "Titillium Web", "noto sans TC", "Microsoft YaHei", "微软雅黑", sans-serif;
 }
 
 a {
