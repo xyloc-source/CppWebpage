@@ -1,4 +1,8 @@
 {
+  "title": "Cppcheck｜C/C++ 程式碼靜態分析與合規工具",
+  "meta": {
+    "description": "Cppcheck 是一款 C/C++ 程式碼靜態分析工具，用於程式缺陷檢測，支援 MISRA、AUTOSAR、CERT 規範，協助提升程式品質與安全性。"
+  },
   "header": {
     "overview": "概述",
     "features": "產品特點",
