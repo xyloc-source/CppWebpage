@@ -68,7 +68,7 @@
     },
     "flexibleOutput": {
       "title": "彈性輸出格式",
-      "description": "支援 text/XML/json 等格式，便於後續整合及客製報告。"
+      "description": "支援 TXT/XML/JSON 等格式，便於後續整合及客製報告。"
     }
   },
   "industry": {

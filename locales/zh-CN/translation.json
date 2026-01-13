@@ -31,7 +31,7 @@
     },
     "security": {
       "title": "提升程序码品质与安全性",
-      "description": "透过深入分析原始码，Cppcheck Premium 能自动识别潜在的错误、记忆体泄漏、缓冲区溢位、未定义行为和安全漏洞，显著提升软体品质并降低维护成本。"
+      "description": "透过深入分析原始码，Cppcheck Premium 能自动识别潜在的错误、记忆体泄漏、缓冲区溢位、未定义行为和安全漏洞，显著提升软件品质并降低维护成本。"
     }
   },
   "features": {
@@ -68,12 +68,12 @@
     },
     "flexibleOutput": {
       "title": "弹性输出格式",
-      "description": "支援 text/XML/json 等格式，便于后续整合及客制报告。"
+      "description": "支援 TXT/XML/JSON 等格式，便于后续整合及客制报告。"
     }
   },
   "industry": {
     "title": "深受全世界行业的信任",
-    "subtitle": "Cppcheck 受到全球各个行业工程师的信任，如<strong>汽车、航天、医疗技术、国防、铁路、消费电子、软体开发、工业装置、金融、电信等。</strong>",
+    "subtitle": "Cppcheck 受到全球各个行业工程师的信任，如<strong>汽车、航天、医疗技术、国防、铁路、消费电子、软件开发、工业装置、金融、电信等。</strong>",
     "description": "Cppcheck 的社群每天都在成长。其程序库托管于 Github，拥有",
     "stars": "颗星标",
     "commits": "次提交",
@@ -88,17 +88,17 @@
     },
     "functionalSafety": {
       "title": "功能安全",
-      "description": "支援多项国际功能安全标准，涵盖医疗、汽车、铁路及一般安全系统，协助企业落实高安全等级的软体开发。",
+      "description": "支援多项国际功能安全标准，涵盖医疗、汽车、铁路及一般安全系统，协助企业落实高安全等级的软件开发。",
       "items": {
-        "iec62304": "IEC 62304（医疗器械软体）",
+        "iec62304": "IEC 62304（医疗器械软件）",
         "iec61508": "IEC 61508（一般安全相关系统）",
         "iso26262": "ISO 26262（汽车功能安全）",
-        "en50128": "EN 50128（铁路软体安全）"
+        "en50128": "EN 50128（铁路软件安全）"
       }
     },
     "automotiveCoding": {
-      "title": "汽车软体编码规范",
-      "description": "完整支援主流车用软体编码规范，确保车控系统在开发阶段即可降低资安与潜在风险。",
+      "title": "汽车软件编码规范",
+      "description": "完整支援主流车用软件编码规范，确保车控系统在开发阶段即可降低资安与潜在风险。",
       "items": {
         "misraC2023": "MISRA C 2023",
         "misraCpp2008": "MISRA C++ 2008",
@@ -154,7 +154,7 @@
           "defense": "国防",
           "railway": "铁路",
           "consumer": "消费电子",
-          "software": "软体开发",
+          "software": "软件开发",
           "industrial": "工业装置",
           "finance": "金融",
           "telecom": "电信",
@@ -169,7 +169,7 @@
         }
       },
       "chat": {
-        "label": "通讯软体帐号<span class='required'>*</span>",
+        "label": "通讯软件帐号<span class='required'>*</span>",
         "option": {
           "wechat": "微信",
           "line": "Line",
@@ -190,7 +190,7 @@
           "freeTrial": "免费试用Cppcheck",
           "pricing": "价格与授权询问",
           "billing": "账单和付款资讯",
-          "installation": "软体安装与设定",
+          "installation": "软件安装与设定",
           "techSupport": "技术支援要求",
           "analysisIssue": "分析结果与误报问题",
           "other": "其它问题"
