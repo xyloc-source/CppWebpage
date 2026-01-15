@@ -17,7 +17,7 @@
   },
   "qrcode": {
     "line": "Line",
-    "wechat": "Wechat"
+    "wechat": "微信"
   },
   "overview": {
     "description": "Cppcheck 于 2010 年起源自开源专案，历经十余年技术累积，于 2021 年正式迈向商业化，现已发展为全球广受信赖的静态程序码分析解决方案。",
@@ -205,7 +205,7 @@
       },
       "disclaimer": "您提供给我们的联络资讯，将作为我们提供产品与服务资讯之联系用途。当您提交讯息时，即表示您同意上述使用范围。",
       "qrcode": {
-        "wechat": "Wechat",
+        "wechat": "微信",
         "line": "Line"
       },
       "submit": "提交",
