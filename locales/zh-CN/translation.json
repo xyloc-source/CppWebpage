@@ -77,7 +77,7 @@
   },
   "industry": {
     "title": "深受全世界行业的信任",
-    "subtitle": "Cppcheck 受到全球各个行业工程师的信任，如<strong>汽车、航天、医疗技术、国防、铁路、消费电子、软件开发、工业装置、金融、电信等。</strong>",
+    "subtitle": "Cppcheck 受到全球各个行业工程师的信任，如<strong>汽车、航天、医疗、国防、铁路、消费电子、软件开发、工业装置、金融、电信等。</strong>",
     "description": "Cppcheck 的社群每天都在成长。其程序库托管于 Github，拥有",
     "stars": "颗星标",
     "commits": "次提交",

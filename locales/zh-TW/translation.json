@@ -77,7 +77,7 @@
   },
   "industry": {
     "title": "深受全世界行業的信任",
-    "subtitle": "Cppcheck 受到全球各個行業工程師的信任，如<strong>汽車、航天、醫療技術、國防、鐵路、消費電子、軟體開發、工業裝置、金融、電信等。</strong>",
+    "subtitle": "Cppcheck 受到全球各個行業工程師的信任，如<strong>汽車、航天、醫療、國防、鐵路、消費電子、軟體開發、工業裝置、金融、電信等。</strong>",
     "description": "Cppcheck 的社群每天都在成長。其程式庫託管於 Github，擁有",
     "stars": "顆星標",
     "commits": "次提交",
