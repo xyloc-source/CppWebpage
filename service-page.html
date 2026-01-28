@@ -35,12 +35,7 @@
           有任何問題，請透過以下表格與我們聯絡，我們會盡快回覆您！
         </p>
 
-        <form
-          id="contactForm"
-          target="hidden_iframe"
-          method="POST"
-          action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScrQDtYCxtWJhlYHlxHBySZrZPuhKm4eDYYGeMYHRR8rG5s0Q/formResponse"
-        >
+        <form id="contactForm">
           <div class="form-row">
             <label for="name" data-i18n="contact.name"
               >姓名<span class="required">*</span></label
@@ -284,11 +279,6 @@
           </div>
         </form>
 
-        <iframe
-          name="hidden_iframe"
-          id="hidden_iframe"
-          style="display: none"
-        ></iframe>
       </main>
     </div>
     <!-- JavaScript -->
@@ -300,55 +290,45 @@
     <script src="./js/common.js"></script>
     <script>
       $(document).ready(function () {
-        var formSubmitted = false;
-        var submitButton = $("#contactForm").find('button[type="submit"]');
-        var originalText = submitButton.text() || submitButton.html();
+        const scriptURL =
+          "https://script.google.com/macros/s/AKfycbwfUYLGc00oj8Ale6y77lOpiJORnU9WndXUF78IMIEiHfJ_P0tFBuPLocDCRDN3PReOzg/exec";
+        const $form = $("#contactForm");
+        const $submitButton = $form.find('button[type="submit"]');
+        const originalText = $submitButton.text() || $submitButton.html();
 
-        $("#hidden_iframe").on("load", function () {
-          if (formSubmitted) {
-            setTimeout(function () {
-              showSuccessMessage();
-              submitButton.prop("disabled", false);
-              if (originalText) {
-                submitButton.text(originalText);
-              }
-              formSubmitted = false;
-            }, 1000);
-          }
-        });
-
-        $("#contactForm").on("submit", function (e) {
-          if (formSubmitted) {
-            e.preventDefault();
-            return false;
-          }
-
-          formSubmitted = true;
-
-          submitButton.prop("disabled", true);
-          submitButton.text("提交中...");
-
-          setTimeout(function () {
-            if (formSubmitted) {
-              showSuccessMessage();
-              submitButton.prop("disabled", false);
-              if (originalText) {
-                submitButton.text(originalText);
-              }
-              formSubmitted = false;
-            }
-          }, 3000);
-        });
-
-        function showSuccessMessage() {
-          var message =
-            typeof i18next !== "undefined" && i18next.isInitialized
-              ? i18next.t("contact.form.success")
-              : "表單已成功提交！";
-
-          alert(message);
-          document.getElementById("contactForm").reset();
+        function getSuccessMessage() {
+          return typeof i18next !== "undefined" && i18next.isInitialized
+            ? i18next.t("contact.form.success")
+            : "表單已成功提交！";
         }
+
+        function getSubmittingText() {
+          return typeof i18next !== "undefined" && i18next.isInitialized
+            ? i18next.t("contact.form.submitting")
+            : "提交中...";
+        }
+
+        $form.on("submit", async function (e) {
+          e.preventDefault();
+
+          $submitButton.prop("disabled", true).text(getSubmittingText());
+
+          try {
+            await fetch(scriptURL, {
+              method: "POST",
+              body: new FormData($form[0]),
+              mode: "no-cors",
+            });
+
+            alert(getSuccessMessage());
+            $form[0].reset();
+          } catch (err) {
+            console.error(err);
+            alert("提交失敗，請檢查網路連線。");
+          } finally {
+            $submitButton.prop("disabled", false).text(originalText);
+          }
+        });
       });
     </script>
   </body>
