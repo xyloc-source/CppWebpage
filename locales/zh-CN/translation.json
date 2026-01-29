@@ -151,6 +151,7 @@
     "form": {
       "industry": {
         "label": "产业类别<span class='required'>*</span>",
+        "placeholder": "请选择",
         "option": {
           "automotive": "汽车",
           "aerospace": "航天",
