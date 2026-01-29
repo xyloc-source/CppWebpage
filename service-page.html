@@ -311,6 +311,12 @@
         $form.on("submit", async function (e) {
           e.preventDefault();
 
+          // 檢查必填欄位
+          if (!$form[0].checkValidity()) {
+            $form[0].reportValidity();
+            return;
+          }
+
           $submitButton.prop("disabled", true).text(getSubmittingText());
 
           try {
